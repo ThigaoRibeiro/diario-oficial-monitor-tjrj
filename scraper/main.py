@@ -8,6 +8,7 @@ import logging
 import os
 import sys
 import re
+import hashlib
 import httpx
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -33,6 +34,11 @@ CONFIG_DIR.mkdir(exist_ok=True)
 
 
 # ── Configurações e Arquivos de Dados ───────────────────────────
+
+def stable_id(prefix: str, value: str) -> str:
+    digest = hashlib.sha1(value.encode("utf-8")).hexdigest()[:16]
+    return f"{prefix}_{digest}"
+
 
 def load_config() -> dict:
     """Carrega as palavras-chave do config/monitorados.json com fallbacks seguros e mescla com a env WATCH_NAMES."""
@@ -99,17 +105,17 @@ def set_output(key: str, value: str) -> None:
     log.info("OUTPUT %s=%s", key, safe_value)
 
 
-def download_latest_djerj_pdf(dest_dir: Path) -> Path:
+def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
     """Tenta baixar o PDF mais recente do DJERJ (Caderno I - Administrativo)."""
     today = datetime.now()
     dest_dir.mkdir(parents=True, exist_ok=True)
     
-    # Busca retrospectivamente até 5 dias para encontrar uma edição disponível
-    for i in range(5):
+    # Busca retrospectivamente para cobrir fins de semana, feriados e atrasos.
+    for i in range(14):
         check_date = today - timedelta(days=i)
         
-        # Diário Oficial não sai no domingo
-        if check_date.weekday() == 6:  # Sunday
+        # O DJERJ normalmente e disponibilizado apenas de segunda a sexta.
+        if check_date.weekday() >= 5:
             continue
             
         date_str = check_date.strftime("%d/%m/%Y")
@@ -152,7 +158,12 @@ def download_latest_djerj_pdf(dest_dir: Path) -> Path:
                         with open(pdf_dest, "wb") as f:
                             for chunk in pdf_resp.iter_bytes(chunk_size=8192):
                                 f.write(chunk)
-                                
+
+                    if pdf_dest.stat().st_size < 1000:
+                        pdf_dest.unlink(missing_ok=True)
+                        log.warning("PDF do DJERJ de %s baixado com tamanho invalido.", date_str)
+                        continue
+
                     log.info("Download do DJERJ concluído para a data %s: %.1f KB", date_str, pdf_dest.stat().st_size / 1024)
                     return pdf_dest
                 else:
@@ -189,8 +200,8 @@ def run() -> None:
     fgv_new_idx, fgv_new_docs, fgv_matches = check_fgv_portal(fgv_prev, watched_kws)
     save_json_file(fgv_index_path, fgv_new_idx)
 
-    # 3. Scraping Frente 3: DJERJ (Consulta últimos 3 dias)
-    djerj_matches = check_djerj(djerj_kws, days_to_check=3)
+    # 3. Scraping Frente 3: DJERJ (consulta os ultimos 7 dias uteis)
+    djerj_matches = check_djerj(djerj_kws, days_to_check=7)
 
     # Consolidando Matches
     new_matches = []
@@ -200,7 +211,7 @@ def run() -> None:
         new_matches.append({
             **m,
             "detected_at": datetime.now().isoformat(),
-            "id": f"tjrj_{hash(m['url'])}"
+            "id": stable_id("tjrj", m["url"])
         })
 
     # Adiciona matches da FGV
@@ -208,7 +219,7 @@ def run() -> None:
         new_matches.append({
             **m,
             "detected_at": datetime.now().isoformat(),
-            "id": f"fgv_{hash(m['url'])}"
+            "id": stable_id("fgv", m["url"])
         })
 
     # Adiciona matches do DJERJ (deduplica baseando em URL do Diário)
@@ -218,7 +229,7 @@ def run() -> None:
             new_matches.append({
                 **m,
                 "detected_at": datetime.now().isoformat(),
-                "id": f"djerj_{hash(m['url'])}"
+                "id": stable_id("djerj", m["url"])
             })
 
     # Se há novos matches de interesse, anexa ao histórico

@@ -37,6 +37,9 @@ jobs:
       - name: Instalar dependências Python
         run: pip install -r scraper/requirements.txt
 
+      - name: Rodar testes Python
+        run: python -m unittest discover -s scraper -p "test*.py"
+
       # ── 3. Execução do Scraper ──────────────────────────────────────────────
       - name: Executar scraper
         id: scraper

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TJRJ Monitor — Acompanhamento Concurso TI</title>
+  <meta name="description" content="Acompanhamento automático de nomeações e convocações do concurso de Analista Judiciário TJRJ." />
+  <meta name="theme-color" content="#060a14" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════ HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <span class="header-icon">🏛️</span>
+      <div>
+        <h1 class="header-title">TJRJ Concurso Monitor</h1>
+        <p class="header-subtitle" id="header-subtitle">Analista Judiciário — Engenharia de Dados (LXII Concurso)</p>
+      </div>
+    </div>
+    <div id="header-watch-badge" class="watch-badge" style="display:none">
+      🔎 Monitorando: <strong id="header-watch-name"></strong>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════ TABS -->
+<nav class="tabs">
+  <button class="tab active" data-tab="avisos">📅 Últimos Avisos (Portal/FGV)</button>
+  <button class="tab" data-tab="diario">📰 Diário da Justiça (DJERJ)</button>
+  <button class="tab" data-tab="config">⚙️ Configurações</button>
+</nav>
+
+<!-- ═══════════════════════ MAIN -->
+<main class="main">
+
+  <!-- ══════════════════════════════════════════
+       ABA: ÚLTIMOS AVISOS
+  ══════════════════════════════════════════ -->
+  <section id="tab-avisos" class="tab-content active">
+    
+    <!-- Busca rápida inline -->
+    <div class="search-bar">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="avisos-search" class="search-input"
+               placeholder="Filtrar avisos por palavra-chave (ex: convocacao, engenheiro)..." autocomplete="off" />
+        <button class="search-clear" id="avisos-search-clear">✕</button>
+      </div>
+    </div>
+
+    <!-- Container geral -->
+    <div id="avisos-loading" class="loading-state"><div class="spinner"></div><p>Carregando documentos...</p></div>
+    
+    <!-- TJRJ Portal -->
+    <div id="tjrj-section" style="display:none">
+      <h3 class="section-header-title">🔗 Documentos no Portal TJRJ</h3>
+      <div id="tjrj-cards" class="cards-grid"></div>
+    </div>
+
+    <!-- FGV Portal -->
+    <div id="fgv-section" style="display:none">
+      <h3 class="section-header-title">⚡ Arquivos no Portal FGV</h3>
+      <div id="fgv-cards" class="cards-grid"></div>
+    </div>
+
+    <div id="avisos-empty" class="empty-state" style="display:none">
+      <div class="empty-icon">📭</div>
+      <h2>Nenhum documento encontrado</h2>
+      <p>Nenhum edital ou aviso carregado no índice global.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABA: DIÁRIO DA JUSTIÇA
+  ══════════════════════════════════════════ -->
+  <section id="tab-diario" class="tab-content" style="display:none">
+    <div class="search-bar">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="diario-search" class="search-input"
+               placeholder="Filtrar menções do Diário..." autocomplete="off" />
+        <button class="search-clear" id="diario-search-clear">✕</button>
+      </div>
+    </div>
+
+    <div id="diario-loading" class="loading-state" style="display:none"><div class="spinner"></div><p>Carregando ocorrências...</p></div>
+    
+    <div id="diario-empty" class="empty-state" style="display:none">
+      <div class="empty-icon">📭</div>
+      <h2>Nenhuma ocorrência encontrada</h2>
+      <p>Nenhuma menção ao seu nome, inscrição ou cargo no DJERJ nos últimos diários analisados.</p>
+    </div>
+
+    <div id="diario-cards" class="cards-grid" style="display:none"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABA: CONFIGURAÇÕES
+  ══════════════════════════════════════════ -->
+  <section id="tab-config" class="tab-content" style="display:none">
+
+    <!-- Meu nome monitorado -->
+    <div class="config-card">
+      <h2 class="config-section-title">👤 Meu Nome de Monitoramento</h2>
+      <p class="config-desc">Configura o destaque visual na Web e ativa o badge de monitoramento para buscas fáceis.</p>
+      <div class="config-row">
+        <input type="text" id="config-name" class="config-input"
+               placeholder="Seu nome completo (ex: THIAGO RIBEIRO DA SILVA)" autocomplete="name" />
+        <button class="btn-save" id="btn-save-name">Salvar</button>
+      </div>
+      <div class="config-row" style="margin-top: 10px;">
+        <button class="btn-save" id="btn-demo-convocacao" style="background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(212,175,55,.3); font-size: 0.8rem; padding: 8px 16px;">
+          🧪 Simular Convocação de Teste
+        </button>
+      </div>
+      <p class="config-saved" id="name-saved-msg" style="display:none">✅ Nome configurado localmente!</p>
+    </div>
+
+    <!-- Limpar dados locais -->
+    <div class="config-card danger-card">
+      <h2 class="config-section-title">🗑️ Limpar Armazenamento Local</h2>
+      <p class="config-desc">Remove as preferências de destaque salvas neste navegador.</p>
+      <button class="btn-danger" id="btn-clear-local">Apagar dados do navegador</button>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER -->
+<footer class="footer">
+  <p>
+    <a href="https://www.tjrj.jus.br" target="_blank" rel="noopener">TJRJ Oficial 🏛️</a>
+    &nbsp;·&nbsp;
+    <a href="https://conhecimento.fgv.br/concursos/tjrjservidores25/01" target="_blank" rel="noopener">Portal FGV ⚡</a>
+    &nbsp;·&nbsp;
+    <a href="https://www3.tjrj.jus.br/consultadje/" target="_blank" rel="noopener">DJERJ 📰</a>
+  </p>
+  <p>Atualização automática de seg-sex às 11:00 e 23:00 (BRT)</p>
+  <p class="footer-disclaimer">
+    Dados agregados automaticamente para auxílio de acompanhamento do concurso. Confirme sempre no Diário da Justiça oficial.
+  </p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -119,6 +119,7 @@ jobs:
                   <strong style="color: #2b6cb0; font-size: 16px;">🎯 Movimentação no Concurso/Diário!</strong>
                   <p style="margin: 6px 0 0 0; color: #2d3748; font-size: 14px; line-height: 1.5;">
                     Sua inscrição, nome ou menções ao cargo de <strong>Engenheiro de Dados</strong> apareceram nas fontes oficiais. Verifique os links abaixo imediatamente.
+                    O PDF do Diário Oficial será enviado em um segundo e-mail separado, para aumentar a chance de entrega pelo Gmail.
                   </p>
                 </div>
                 
@@ -137,6 +138,28 @@ jobs:
                   Monitoramento automatizado · Atualizações de domingo a domingo às 11h e 23h (BRT)
                 </p>
               </div>
+            </body>
+            </html>
+
+      - name: Enviar e-mail — PDF DJERJ
+        if: steps.scraper.outputs.has_watched_match == 'true' && hashFiles('tmp/*.pdf') != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Monitor TJRJ - PDF do Diario Oficial"
+          to: ${{ secrets.EMAIL_TO }}
+          from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
+          attachments: tmp/*.pdf
+          html_body: |
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #0e3a9e;">PDF do Diario Oficial</h2>
+              <p>Segue em anexo o PDF do DJERJ baixado na última verificação do Monitor TJRJ.</p>
+              <p>Este e-mail é enviado separado do alerta principal para reduzir o risco de o Gmail filtrar a notificação.</p>
             </body>
             </html>
 

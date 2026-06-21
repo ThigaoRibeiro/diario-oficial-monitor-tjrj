@@ -808,7 +808,60 @@
       "source": "fgv_portal",
       "detected_at": "2026-06-21T13:51:22.394740",
       "id": "fgv_-988714523423912365"
+    },
+    {
+      "title": "Mencao no DJERJ de 12/06/2026 (Pag. 46)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=12%2F06%2F2026&caderno=A&pagina=46",
+      "snippet": "dia 12/06/2026, caderno I - Administrativo, página 46, nrpagina 1",
+      "date": "2026-06-12",
+      "pagina": "46",
+      "caderno": "A",
+      "keyword": "397050352",
+      "matched_keywords": [
+        "397050352",
+        "THIAGO RIBEIRO DA SILVA",
+        "ENGENHEIRO DE DADOS",
+        "ANALISTA JUDICIÁRIO - ENGENHEIRO DE DADOS"
+      ],
+      "search_info": "Você fez uma busca pelo texto 397050352 no diário publicado em 12/06/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-06-21T16:15:10.699555",
+      "id": "djerj_adfd294ea4c5192e"
+    },
+    {
+      "title": "Mencao no DJERJ de 12/06/2026 (Pag. 93)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=12%2F06%2F2026&caderno=A&pagina=93",
+      "snippet": "dia 12/06/2026, caderno I - Administrativo, página 93, nrpagina 1",
+      "date": "2026-06-12",
+      "pagina": "93",
+      "caderno": "A",
+      "keyword": "ENGENHEIRO DE DADOS",
+      "matched_keywords": [
+        "ENGENHEIRO DE DADOS",
+        "ANALISTA JUDICIÁRIO - ENGENHEIRO DE DADOS"
+      ],
+      "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 12/06/2026 . (total de 3 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-06-21T16:15:10.699589",
+      "id": "djerj_c809237324f46404"
+    },
+    {
+      "title": "Mencao no DJERJ de 12/06/2026 (Pag. 119)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=12%2F06%2F2026&caderno=A&pagina=119",
+      "snippet": "dia 12/06/2026, caderno I - Administrativo, página 119, nrpagina 1",
+      "date": "2026-06-12",
+      "pagina": "119",
+      "caderno": "A",
+      "keyword": "ENGENHEIRO DE DADOS",
+      "matched_keywords": [
+        "ENGENHEIRO DE DADOS",
+        "ANALISTA JUDICIÁRIO - ENGENHEIRO DE DADOS"
+      ],
+      "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 12/06/2026 . (total de 3 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-06-21T16:15:10.699595",
+      "id": "djerj_0261d344c7238bee"
     }
   ],
-  "last_update": "21/06/2026 16:00:21"
+  "last_update": "21/06/2026 16:15:10"
 }

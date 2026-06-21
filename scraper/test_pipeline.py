@@ -102,6 +102,10 @@ def test_full_pipeline(mock_get_call):
         main.CONFIG_DIR = Path(__file__).parent.parent / "config"
         main.DATA_DIR = Path(__file__).parent.parent / "data"
         
+        # Limpa dados anteriores para garantir que todos os mock_links sejam tratados como novos
+        for f_name in ["tjrj_portal_index.json", "fgv_portal_index.json", "matches.json", "global-index.json"]:
+            (main.DATA_DIR / f_name).unlink(missing_ok=True)
+        
         # Roda o orquestrador
         main.run()
         

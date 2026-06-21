@@ -33,7 +33,7 @@ CONFIG_DIR.mkdir(exist_ok=True)
 # ── Configurações e Arquivos de Dados ───────────────────────────
 
 def load_config() -> dict:
-    """Carrega as palavras-chave do config/monitorados.json com fallbacks seguros."""
+    """Carrega as palavras-chave do config/monitorados.json com fallbacks seguros e mescla com a env WATCH_NAMES."""
     config_path = CONFIG_DIR / "monitorados.json"
     default_config = {
         "watched_keywords": [
@@ -42,7 +42,7 @@ def load_config() -> dict:
         ],
         "djerj_keywords": [
             "397050352", "THIAGO RIBEIRO DA SILVA", "ENGENHEIRO DE DADOS",
-            "ANLISTA JUDICIÁRIO - ENGENHEIRO DE DADOS"
+            "ANALISTA JUDICIÁRIO - ENGENHEIRO DE DADOS"
         ]
     }
 
@@ -50,15 +50,29 @@ def load_config() -> dict:
         try:
             data = json.loads(config_path.read_text(encoding="utf-8"))
             if "watched_keywords" in data and "djerj_keywords" in data:
-                return data
+                default_config = data
         except Exception as e:
             log.warning("Falha ao carregar config/monitorados.json, usando padrão: %s", e)
 
     # Cria o arquivo default se não existir
-    try:
-        config_path.write_text(json.dumps(default_config, ensure_ascii=False, indent=2), encoding="utf-8")
-    except Exception as e:
-        log.warning("Falha ao salvar config/monitorados.json default: %s", e)
+    if not config_path.exists():
+        try:
+            config_path.write_text(json.dumps(default_config, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:
+            log.warning("Falha ao salvar config/monitorados.json default: %s", e)
+
+    # Adiciona valores da variável de ambiente WATCH_NAMES (separada por vírgulas)
+    env_val = os.environ.get("WATCH_NAMES", "")
+    if env_val:
+        for val in env_val.split(","):
+            val_clean = val.strip()
+            if val_clean:
+                # Adiciona ao djerj_keywords se não estiver lá
+                if val_clean not in default_config["djerj_keywords"]:
+                    default_config["djerj_keywords"].append(val_clean)
+                # Adiciona ao watched_keywords se não estiver lá
+                if val_clean not in default_config["watched_keywords"]:
+                    default_config["watched_keywords"].append(val_clean)
 
     return default_config
 
@@ -184,10 +198,11 @@ def run() -> None:
                 matched_names.append(m["keyword"])
                 detail_text = f" (Pesquisa: {m['keyword']})"
 
+            snippet_html = f'<br><span style="font-size: 13px; color: #555;">{escape(m["snippet"])}</span>' if 'snippet' in m else ''
             summary_html.append(
                 f"<div style='border-left: 4px solid #d4af37; background: #f8f9fa; padding: 12px; margin-bottom: 12px;'>"
                 f"<strong>[{src}]</strong> <a href='{url}' style='color: #0e3a9e; font-weight: bold;'>{escape(title)}</a>{escape(detail_text)}"
-                f"{f'<br><span style=\"font-size: 13px; color: #555;\">{escape(m[\"snippet\"])}</span>' if 'snippet' in m else ''}"
+                f"{snippet_html}"
                 f"</div>"
             )
     else:

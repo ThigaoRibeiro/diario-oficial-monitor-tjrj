@@ -1,6 +1,13 @@
 name: TJRJ Monitor — Scrape Concurso
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-scrape.yml"
+      - "scraper/**"
+      - "config/**"
+
   schedule:
     # Rodar de domingo a domingo às 11:00 e 23:00 BRT (GMT-3)
     # 11:00 BRT = 14:00 UTC
@@ -10,6 +17,12 @@ on:
 
   # Permite execução manual a partir do GitHub Actions
   workflow_dispatch:
+    inputs:
+      resend_last_alert:
+        description: "Reenviar por e-mail as últimas ocorrências já encontradas"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -47,6 +60,7 @@ jobs:
         run: python main.py
         env:
           WATCH_NAMES: ${{ secrets.WATCH_NAMES }}
+          RESEND_LAST_MATCHES: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.resend_last_alert == 'true') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[resend-alert]')) }}
 
       # ── 4. Commit dos dados ─────────────────────────────────────────────────
       - name: Commit e push dos dados
@@ -90,7 +104,6 @@ jobs:
           subject: "🚨 URGENTE: Ocorrência TJRJ encontrada para ${{ steps.scraper.outputs.watched_matched_names }}!"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
-          attachments: tmp/*.pdf
           html_body: |
             <html>
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f0f4f8;">
@@ -139,7 +152,6 @@ jobs:
           subject: "📭 Monitor TJRJ — Relatório Diário de ${{ steps.scraper.outputs.edition_date }}"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
-          attachments: tmp/*.pdf
           html_body: |
             <html>
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f7fafc;">

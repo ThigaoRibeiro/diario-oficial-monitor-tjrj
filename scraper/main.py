@@ -258,18 +258,28 @@ def run() -> None:
     download_latest_djerj_pdf(tmp_dir)
 
     # Geração do sumário e outputs do GitHub Actions
-    has_watched_match = len(new_matches) > 0
+    matches_for_email = list(new_matches)
+    resend_last_matches = os.environ.get("RESEND_LAST_MATCHES", "").strip().lower() in {"1", "true", "yes", "sim"}
+    if resend_last_matches and not matches_for_email and matches_history:
+        matches_for_email = matches_history[-5:]
+        log.info("Reenviando %d matches anteriores por solicitação do workflow.", len(matches_for_email))
+
+    has_watched_match = len(matches_for_email) > 0
     matched_names = []
     
     summary_lines = []
     summary_html = []
 
-    # Detalha novos matches no e-mail
-    if new_matches:
-        summary_lines.append("🚨 OCORRÊNCIA ENCONTRADA:")
-        summary_html.append("<h2 style='color: #e53e3e;'>🚨 Ocorrências de interesse encontradas:</h2>")
+    # Detalha matches no e-mail
+    if matches_for_email:
+        if new_matches:
+            summary_lines.append("🚨 OCORRÊNCIA ENCONTRADA:")
+            summary_html.append("<h2 style='color: #e53e3e;'>🚨 Ocorrências de interesse encontradas:</h2>")
+        else:
+            summary_lines.append("🚨 REENVIO DE OCORRÊNCIAS JÁ ENCONTRADAS:")
+            summary_html.append("<h2 style='color: #e53e3e;'>🚨 Reenvio das últimas ocorrências encontradas:</h2>")
         
-        for m in new_matches:
+        for m in matches_for_email:
             src = "Diário Oficial" if m["source"] == "djerj_search" else "Página do Concurso"
             title = m["title"]
             url = m["url"]

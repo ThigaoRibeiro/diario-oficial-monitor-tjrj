@@ -313,7 +313,8 @@ def run() -> None:
     # manda o link da edição em vez do anexo, garantindo a entrega.
     djerj_pdf_exists = djerj_pdf_path is not None
     djerj_pdf_attachable = False
-    djerj_pdf_url = ""
+    # Link sempre válido para o e-mail, mesmo quando não há PDF baixado.
+    djerj_pdf_url = f"{DJERJ_HOST}/consultadje/"
     if djerj_pdf_path is not None:
         size_mb = djerj_pdf_path.stat().st_size / 1024 / 1024
         djerj_pdf_attachable = size_mb <= GMAIL_ATTACH_LIMIT_MB
@@ -326,7 +327,7 @@ def run() -> None:
                 f"?dtPub={date_br}&caderno=A&pagina=-1"
             )
         except ValueError:
-            djerj_pdf_url = f"{DJERJ_HOST}/consultadje/"
+            pass
 
     # Geração do sumário e outputs do GitHub Actions
     matches_for_email = list(new_matches)

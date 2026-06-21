@@ -142,7 +142,7 @@ jobs:
             </html>
 
       - name: Enviar e-mail — PDF DJERJ
-        if: steps.scraper.outputs.has_watched_match == 'true' && hashFiles('tmp/*.pdf') != ''
+        if: hashFiles('tmp/*.pdf') != ''
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -150,7 +150,7 @@ jobs:
           secure: false
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Monitor TJRJ - PDF do Diario Oficial"
+          subject: "Monitor TJRJ - PDF do Diario Oficial - ${{ steps.scraper.outputs.edition_date }}"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
           attachments: tmp/*.pdf

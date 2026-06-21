@@ -108,6 +108,10 @@ def set_output(key: str, value: str) -> None:
 
 DJERJ_HOST = "https://www3.tjrj.jus.br"
 
+# Gmail recusa mensagens acima de 25 MB; o base64 do anexo infla ~33%, então
+# o limite prático de PDF anexável fica em torno de 18 MB.
+GMAIL_ATTACH_LIMIT_MB = 18.0
+
 
 def _extract_djerj_pdf_url(html: str) -> str | None:
     """
@@ -162,29 +166,59 @@ def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
 
         log.info("Verificando se existe edição do DJERJ para %s...", date_str)
         try:
-            with httpx.Client(headers=headers, follow_redirects=True, timeout=30) as client:
+            with httpx.Client(headers=headers, follow_redirects=True, timeout=60) as client:
                 resp = client.get(url, params=params)
                 resp.raise_for_status()
 
                 pdf_url = _extract_djerj_pdf_url(resp.text)
-                if pdf_url:
-                    log.info("Edição do DJERJ encontrada para %s. Baixando PDF...", date_str)
-
-                    with client.stream("GET", pdf_url) as pdf_resp:
-                        pdf_resp.raise_for_status()
-                        with open(pdf_dest, "wb") as f:
-                            for chunk in pdf_resp.iter_bytes(chunk_size=8192):
-                                f.write(chunk)
-
-                    if pdf_dest.stat().st_size < 1000:
-                        pdf_dest.unlink(missing_ok=True)
-                        log.warning("PDF do DJERJ de %s baixado com tamanho invalido.", date_str)
-                        continue
-
-                    log.info("Download do DJERJ concluído para a data %s: %.1f KB", date_str, pdf_dest.stat().st_size / 1024)
-                    return pdf_dest
-                else:
+                if not pdf_url:
                     log.info("Edição do DJERJ de %s não encontrada ou sem PDF disponível.", date_str)
+                    continue
+
+                log.info("Edição do DJERJ encontrada para %s. Baixando PDF...", date_str)
+
+                with client.stream("GET", pdf_url) as pdf_resp:
+                    pdf_resp.raise_for_status()
+                    content_type = pdf_resp.headers.get("content-type", "")
+                    with open(pdf_dest, "wb") as f:
+                        for chunk in pdf_resp.iter_bytes(chunk_size=8192):
+                            f.write(chunk)
+
+                size = pdf_dest.stat().st_size
+                with open(pdf_dest, "rb") as f:
+                    magic = f.read(5)
+
+                # Validação real: o handler ASP.NET pode devolver uma página de
+                # erro HTML (sessão/GUID/variação por IP) com status 200. Sem
+                # checar a assinatura %PDF-, esse HTML seria salvo como .pdf e
+                # anexado quebrado no e-mail — exatamente o sintoma de "não veio
+                # PDF". O Monitor de Nova Iguaçu já faz essa checagem.
+                log.info(
+                    "Resposta do DJERJ de %s: status=%s content-type=%s tamanho=%.1f KB magic=%r",
+                    date_str, pdf_resp.status_code, content_type, size / 1024, magic,
+                )
+
+                if magic != b"%PDF-" or size < 1000:
+                    pdf_dest.unlink(missing_ok=True)
+                    log.warning(
+                        "Arquivo do DJERJ de %s descartado: não é um PDF válido (magic=%r, %d bytes).",
+                        date_str, magic, size,
+                    )
+                    continue
+
+                size_mb = size / 1024 / 1024
+                if size_mb > GMAIL_ATTACH_LIMIT_MB:
+                    # Gmail rejeita mensagens > 25 MB; com o overhead ~33% do
+                    # base64, qualquer PDF acima de ~18 MB estoura o limite. A
+                    # edição da homologação (ex.: 12/06/2026 = 24 MB) cai aqui.
+                    log.warning(
+                        "PDF do DJERJ de %s tem %.1f MB e provavelmente excede o limite "
+                        "de anexo do Gmail (%.0f MB) — o e-mail deve enviar o link em vez do anexo.",
+                        date_str, size_mb, GMAIL_ATTACH_LIMIT_MB,
+                    )
+
+                log.info("Download do DJERJ concluído para a data %s: %.1f KB", date_str, size / 1024)
+                return pdf_dest
         except Exception as e:
             log.error("Erro ao tentar baixar PDF do DJERJ de %s: %s", date_str, e)
 
@@ -271,8 +305,28 @@ def run() -> None:
             f.unlink(missing_ok=True)
     else:
         tmp_dir.mkdir(parents=True, exist_ok=True)
-        
-    download_latest_djerj_pdf(tmp_dir)
+
+    djerj_pdf_path = download_latest_djerj_pdf(tmp_dir)
+
+    # Metadados do PDF para o e-mail. Edições pesadas (ex.: homologação) passam
+    # de 20 MB e estouram o limite de anexo do Gmail — nesse caso o workflow
+    # manda o link da edição em vez do anexo, garantindo a entrega.
+    djerj_pdf_exists = djerj_pdf_path is not None
+    djerj_pdf_attachable = False
+    djerj_pdf_url = ""
+    if djerj_pdf_path is not None:
+        size_mb = djerj_pdf_path.stat().st_size / 1024 / 1024
+        djerj_pdf_attachable = size_mb <= GMAIL_ATTACH_LIMIT_MB
+        # O stem é djerj_YYYY-MM-DD; reconstrói o link do visualizador oficial.
+        try:
+            iso = djerj_pdf_path.stem.replace("djerj_", "")
+            date_br = datetime.strptime(iso, "%Y-%m-%d").strftime("%d/%m/%Y")
+            djerj_pdf_url = (
+                f"{DJERJ_HOST}/consultadje/consultaDJE.aspx"
+                f"?dtPub={date_br}&caderno=A&pagina=-1"
+            )
+        except ValueError:
+            djerj_pdf_url = f"{DJERJ_HOST}/consultadje/"
 
     # Geração do sumário e outputs do GitHub Actions
     matches_for_email = list(new_matches)
@@ -337,16 +391,15 @@ def run() -> None:
     # Define outputs da action
     today_str = datetime.now().strftime("%d/%m/%Y")
     unique_matched_names = list(set(matched_names))
-    
-    # Verifica se o PDF do DJERJ foi baixado com sucesso na pasta tmp
-    pdf_exists = any(tmp_dir.glob("*.pdf")) if 'tmp_dir' in locals() else False
-    
+
     set_output("has_watched_match", "true" if has_watched_match else "false")
     set_output("watched_matched_names", ", ".join(unique_matched_names) if unique_matched_names else "Nenhum")
     set_output("edition_date", today_str)
     set_output("email_summary", " | ".join(summary_lines))
     set_output("email_summary_html", "".join(summary_html))
-    set_output("djerj_pdf_exists", "true" if pdf_exists else "false")
+    set_output("djerj_pdf_exists", "true" if djerj_pdf_exists else "false")
+    set_output("djerj_pdf_attachable", "true" if djerj_pdf_attachable else "false")
+    set_output("djerj_pdf_url", djerj_pdf_url)
 
     log.info("=== Processamento Concluído ===")
 

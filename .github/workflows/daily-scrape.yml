@@ -141,8 +141,9 @@ jobs:
             </body>
             </html>
 
-      - name: Enviar e-mail — PDF DJERJ
-        if: steps.scraper.outputs.djerj_pdf_exists == 'true'
+      # Edição leve: cabe no limite do Gmail, vai como anexo.
+      - name: Enviar e-mail — PDF DJERJ (anexo)
+        if: steps.scraper.outputs.djerj_pdf_exists == 'true' && steps.scraper.outputs.djerj_pdf_attachable == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -159,6 +160,35 @@ jobs:
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
               <h2 style="color: #0e3a9e;">PDF do Diario Oficial</h2>
               <p>Segue em anexo o PDF do DJERJ baixado na última verificação do Monitor TJRJ.</p>
+              <p>Se preferir abrir no site oficial:
+                 <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">ver edição no DJERJ</a>.</p>
+              <p>Este e-mail é enviado separado do alerta principal para reduzir o risco de o Gmail filtrar a notificação.</p>
+            </body>
+            </html>
+
+      # Edição pesada (ex.: homologação ~24 MB): excede o limite de anexo do
+      # Gmail. Em vez de falhar/enviar anexo quebrado, manda o link da edição.
+      - name: Enviar e-mail — PDF DJERJ (link, edição grande)
+        if: steps.scraper.outputs.djerj_pdf_exists == 'true' && steps.scraper.outputs.djerj_pdf_attachable != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Monitor TJRJ - Diario Oficial (edicao grande) - ${{ steps.scraper.outputs.edition_date }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
+          html_body: |
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #0e3a9e;">PDF do Diario Oficial</h2>
+              <p>A edição do DJERJ desta verificação é grande demais para anexar por e-mail
+                 (excede o limite do Gmail), então segue o link para abrir direto no site oficial:</p>
+              <p style="font-size: 16px;">
+                👉 <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">Abrir edição do Diário Oficial (DJERJ)</a>
+              </p>
               <p>Este e-mail é enviado separado do alerta principal para reduzir o risco de o Gmail filtrar a notificação.</p>
             </body>
             </html>

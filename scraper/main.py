@@ -7,7 +7,9 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime
+import re
+import httpx
+from datetime import datetime, timedelta
 from pathlib import Path
 from html import escape
 
@@ -97,6 +99,70 @@ def set_output(key: str, value: str) -> None:
     log.info("OUTPUT %s=%s", key, safe_value)
 
 
+def download_latest_djerj_pdf(dest_dir: Path) -> Path:
+    """Tenta baixar o PDF mais recente do DJERJ (Caderno I - Administrativo)."""
+    today = datetime.now()
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Busca retrospectivamente até 5 dias para encontrar uma edição disponível
+    for i in range(5):
+        check_date = today - timedelta(days=i)
+        
+        # Diário Oficial não sai no domingo
+        if check_date.weekday() == 6:  # Sunday
+            continue
+            
+        date_str = check_date.strftime("%d/%m/%Y")
+        iso_date = check_date.strftime("%Y-%m-%d")
+        pdf_dest = dest_dir / f"djerj_{iso_date}.pdf"
+        
+        if pdf_dest.exists() and pdf_dest.stat().st_size > 1000:
+            log.info("PDF do DJERJ de %s já existe localmente: %s", date_str, pdf_dest)
+            return pdf_dest
+            
+        url = "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx"
+        params = {
+            "dtPub": date_str,
+            "caderno": "A",
+            "pagina": "-1"
+        }
+        
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            )
+        }
+        
+        log.info("Verificando se existe edição do DJERJ para %s...", date_str)
+        try:
+            with httpx.Client(headers=headers, follow_redirects=True, timeout=30) as client:
+                resp = client.get(url, params=params)
+                resp.raise_for_status()
+                
+                # Busca o link do gedcacheweb no javascript da página
+                match = re.search(r"url:\s*'([^']+gedcacheweb/default\.aspx[^']+)'", resp.text)
+                if match:
+                    pdf_url = match.group(1)
+                    log.info("Edição do DJERJ encontrada para %s. Baixando PDF...", date_str)
+                    
+                    with client.stream("GET", pdf_url) as pdf_resp:
+                        pdf_resp.raise_for_status()
+                        with open(pdf_dest, "wb") as f:
+                            for chunk in pdf_resp.iter_bytes(chunk_size=8192):
+                                f.write(chunk)
+                                
+                    log.info("Download do DJERJ concluído para a data %s: %.1f KB", date_str, pdf_dest.stat().st_size / 1024)
+                    return pdf_dest
+                else:
+                    log.info("Edição do DJERJ de %s não encontrada ou sem PDF disponível.", date_str)
+        except Exception as e:
+            log.error("Erro ao tentar baixar PDF do DJERJ de %s: %s", date_str, e)
+            
+    return None
+
+
 # ── Execução do Pipeline ──────────────────────────────────────
 
 def run() -> None:
@@ -169,6 +235,16 @@ def run() -> None:
         "last_update": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     }
     save_json_file(DATA_DIR / "global-index.json", global_index)
+
+    # Limpa arquivos PDF antigos da pasta tmp e baixa o PDF mais recente do DJERJ
+    tmp_dir = ROOT / "tmp"
+    if tmp_dir.exists():
+        for f in tmp_dir.glob("*.pdf"):
+            f.unlink(missing_ok=True)
+    else:
+        tmp_dir.mkdir(parents=True, exist_ok=True)
+        
+    download_latest_djerj_pdf(tmp_dir)
 
     # Geração do sumário e outputs do GitHub Actions
     has_watched_match = len(new_matches) > 0

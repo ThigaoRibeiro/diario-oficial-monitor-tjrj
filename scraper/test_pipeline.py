@@ -71,6 +71,20 @@ MOCK_DJERJ_HTML = """
 """
 
 
+class MockStream:
+    def __init__(self, *args, **kwargs):
+        self.status_code = 200
+        self.headers = {"content-type": "application/pdf"}
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+    def raise_for_status(self):
+        pass
+    def iter_bytes(self, chunk_size=8192):
+        yield b"%PDF-1.4 Mocked PDF content"
+
+
 def mock_get(url, *args, **kwargs):
     mock_resp = MagicMock()
     mock_resp.status_code = 200
@@ -82,14 +96,17 @@ def mock_get(url, *args, **kwargs):
         mock_resp.text = MOCK_FGV_HTML
     elif "consultadje/Result.aspx" in url_str:
         mock_resp.text = MOCK_DJERJ_HTML
+    elif "consultaDJE.aspx" in url_str:
+        mock_resp.text = "<html><body>App.PanelLoad.load({ url: 'http://www1.tjrj.jus.br/gedcacheweb/default.aspx?GEDID=123' });</body></html>"
     else:
         mock_resp.text = "<html></html>"
         
     return mock_resp
 
 
+@patch("httpx.Client.stream", return_value=MockStream())
 @patch("httpx.Client.get", side_effect=mock_get)
-def test_full_pipeline(mock_get_call):
+def test_full_pipeline(mock_get_call, mock_stream_call):
     log.info("Iniciando simulação de teste local...")
     
     # Define outputs fakes do GITHUB_OUTPUT

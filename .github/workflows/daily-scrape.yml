@@ -87,7 +87,7 @@ jobs:
           subject: "🚨 URGENTE: Ocorrência TJRJ encontrada para ${{ steps.scraper.outputs.watched_matched_names }}!"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
-          attachments: ""
+          attachments: tmp/*.pdf
           html_body: |
             <html>
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f0f4f8;">
@@ -136,7 +136,7 @@ jobs:
           subject: "📭 Monitor TJRJ — Relatório Diário de ${{ steps.scraper.outputs.edition_date }}"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
-          attachments: ""
+          attachments: tmp/*.pdf
           html_body: |
             <html>
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f7fafc;">

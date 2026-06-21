@@ -321,11 +321,15 @@ def run() -> None:
     today_str = datetime.now().strftime("%d/%m/%Y")
     unique_matched_names = list(set(matched_names))
     
+    # Verifica se o PDF do DJERJ foi baixado com sucesso na pasta tmp
+    pdf_exists = any(tmp_dir.glob("*.pdf")) if 'tmp_dir' in locals() else False
+    
     set_output("has_watched_match", "true" if has_watched_match else "false")
     set_output("watched_matched_names", ", ".join(unique_matched_names) if unique_matched_names else "Nenhum")
     set_output("edition_date", today_str)
     set_output("email_summary", " | ".join(summary_lines))
     set_output("email_summary_html", "".join(summary_html))
+    set_output("djerj_pdf_exists", "true" if pdf_exists else "false")
 
     log.info("=== Processamento Concluído ===")
 

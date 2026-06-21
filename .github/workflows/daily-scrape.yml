@@ -142,7 +142,7 @@ jobs:
             </html>
 
       - name: Enviar e-mail — PDF DJERJ
-        if: hashFiles('tmp/*.pdf') != ''
+        if: steps.scraper.outputs.djerj_pdf_exists == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com

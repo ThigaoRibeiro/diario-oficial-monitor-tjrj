@@ -16,7 +16,6 @@ permissions:
 
 jobs:
   scrape:
-    runs-ok: ubuntu-latest
     runs-on: ubuntu-latest
     timeout-minutes: 15
 

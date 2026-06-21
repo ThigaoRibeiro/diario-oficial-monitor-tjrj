@@ -2,11 +2,11 @@ name: TJRJ Monitor — Scrape Concurso
 
 on:
   schedule:
-    # Rodar de segunda a sexta às 11:00 e 23:00 BRT (GMT-3)
+    # Rodar de domingo a domingo às 11:00 e 23:00 BRT (GMT-3)
     # 11:00 BRT = 14:00 UTC
-    # 23:00 BRT = 02:00 UTC (terça-sábado em UTC)
-    - cron: "0 14 * * 1-5"
-    - cron: "0 2 * * 2-6"
+    # 23:00 BRT = 02:00 UTC
+    - cron: "0 14 * * *"
+    - cron: "0 2 * * *"
 
   # Permite execução manual a partir do GitHub Actions
   workflow_dispatch:

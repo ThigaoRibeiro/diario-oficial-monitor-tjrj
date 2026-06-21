@@ -6,6 +6,8 @@ import json
 import logging
 import sys
 import os
+import tempfile
+import unittest
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
@@ -82,7 +84,9 @@ class MockStream:
     def raise_for_status(self):
         pass
     def iter_bytes(self, chunk_size=8192):
-        yield b"%PDF-1.4 Mocked PDF content"
+        # Precisa passar dos 1000 bytes: main.py descarta downloads menores
+        # que isso por considerá-los uma resposta inválida/incompleta.
+        yield b"%PDF-1.4 Mocked PDF content" + b"0" * 1000
 
 
 def mock_get(url, *args, **kwargs):
@@ -96,70 +100,90 @@ def mock_get(url, *args, **kwargs):
         mock_resp.text = MOCK_FGV_HTML
     elif "consultadje/Result.aspx" in url_str:
         mock_resp.text = MOCK_DJERJ_HTML
-    elif "consultaDJE.aspx" in url_str:
-        mock_resp.text = "<html><body>App.PanelLoad.load({ url: 'http://www1.tjrj.jus.br/gedcacheweb/default.aspx?GEDID=123' });</body></html>"
+    elif "pdf.aspx" in url_str:
+        mock_resp.text = (
+            '<html><body><input type="hidden" id="hdnPrintUrl" '
+            'value="/CONSULTADJE/Handlers/DownloadPdf.ashx?guid=mock-guid.pdf'
+            '&amp;dtPub=2026-06-21&amp;caderno=A&amp;pagina=-1" /></body></html>'
+        )
     else:
         mock_resp.text = "<html></html>"
         
     return mock_resp
 
 
-@patch("httpx.Client.stream", return_value=MockStream())
-@patch("httpx.Client.get", side_effect=mock_get)
-def test_full_pipeline(mock_get_call, mock_stream_call):
-    log.info("Iniciando simulação de teste local...")
-    
-    # Define outputs fakes do GITHUB_OUTPUT
-    os.environ["GITHUB_OUTPUT"] = "output_test.txt"
-    Path("output_test.txt").unlink(missing_ok=True)
-    
-    try:
+class FullPipelineTests(unittest.TestCase):
+    # NOTA: precisa estar dentro de uma unittest.TestCase para que
+    # `python -m unittest discover` (usado no workflow do CI) realmente
+    # execute este teste. Como função solta no módulo, ela é silenciosamente
+    # ignorada pelo discovery — o CI reportava sucesso sem nunca rodá-la.
+    @patch("httpx.Client.stream", return_value=MockStream())
+    @patch("httpx.Client.get", side_effect=mock_get)
+    def test_full_pipeline(self, mock_get_call, mock_stream_call):
+        log.info("Iniciando simulação de teste local...")
+
         import main
-        # Força o carregamento de configurações limpas
-        main.CONFIG_DIR = Path(__file__).parent.parent / "config"
-        main.DATA_DIR = Path(__file__).parent.parent / "data"
-        
-        # Limpa dados anteriores para garantir que todos os mock_links sejam tratados como novos
-        for f_name in ["tjrj_portal_index.json", "fgv_portal_index.json", "matches.json", "global-index.json"]:
-            (main.DATA_DIR / f_name).unlink(missing_ok=True)
-        
-        # Roda o orquestrador
-        main.run()
-        
-        # Valida que os arquivos foram gerados
-        data_dir = main.DATA_DIR
-        tjrj_idx = data_dir / "tjrj_portal_index.json"
-        fgv_idx = data_dir / "fgv_portal_index.json"
-        matches = data_dir / "matches.json"
-        global_idx = data_dir / "global-index.json"
-        
-        assert tjrj_idx.exists(), "tjrj_portal_index.json não foi criado"
-        assert fgv_idx.exists(), "fgv_portal_index.json não foi criado"
-        assert matches.exists(), "matches.json não foi criado"
-        assert global_idx.exists(), "global-index.json não foi criado"
-        
-        log.info("✅ Todos os arquivos JSON foram criados com sucesso!")
-        
-        # Verifica matches encontrados
-        match_data = json.loads(matches.read_text(encoding="utf-8"))
-        log.info("Matches carregados no histórico: %d", len(match_data))
-        for m in match_data:
-            log.info("  → Match [%s]: %s", m["source"], m["title"])
-            
-        assert len(match_data) >= 3, "Deveria ter extraído pelo menos 3 matches nos mocks"
-        
-        # Valida que o GITHUB_OUTPUT foi escrito
-        output_content = Path("output_test.txt").read_text(encoding="utf-8")
-        log.info("\n── Outputs simulados para o GitHub ──\n%s", output_content)
-        
-        assert "has_watched_match=true" in output_content, "Deveria acusar match de interesse"
-        
-        log.info("✅ Pipeline completo validado com sucesso!")
-        
-    finally:
-        # Limpa arquivo temporário
+
+        # Guarda os caminhos reais do projeto pra restaurar depois — o teste
+        # roda o pipeline de verdade (main.run()) e NÃO pode escrever em
+        # data/config/tmp reais, ou apaga/sobrescreve histórico de produção
+        # (matches.json é append-only; um teste rodando ali destrói dados reais).
+        original_root, original_config_dir, original_data_dir = main.ROOT, main.CONFIG_DIR, main.DATA_DIR
+
+        os.environ["GITHUB_OUTPUT"] = "output_test.txt"
         Path("output_test.txt").unlink(missing_ok=True)
+
+        try:
+            with tempfile.TemporaryDirectory() as tmp_root:
+                tmp_root = Path(tmp_root)
+                main.ROOT = tmp_root
+                main.CONFIG_DIR = tmp_root / "config"
+                main.DATA_DIR = tmp_root / "data"
+
+                # Roda o orquestrador num diretório isolado e descartável
+                main.run()
+
+                data_dir = main.DATA_DIR
+                tjrj_idx = data_dir / "tjrj_portal_index.json"
+                fgv_idx = data_dir / "fgv_portal_index.json"
+                matches = data_dir / "matches.json"
+                global_idx = data_dir / "global-index.json"
+
+                self.assertTrue(tjrj_idx.exists(), "tjrj_portal_index.json não foi criado")
+                self.assertTrue(fgv_idx.exists(), "fgv_portal_index.json não foi criado")
+                self.assertTrue(matches.exists(), "matches.json não foi criado")
+                self.assertTrue(global_idx.exists(), "global-index.json não foi criado")
+
+                log.info("✅ Todos os arquivos JSON foram criados com sucesso!")
+
+                # Verifica matches encontrados
+                match_data = json.loads(matches.read_text(encoding="utf-8"))
+                log.info("Matches carregados no histórico: %d", len(match_data))
+                for m in match_data:
+                    log.info("  → Match [%s]: %s", m["source"], m["title"])
+
+                self.assertGreaterEqual(len(match_data), 3, "Deveria ter extraído pelo menos 3 matches nos mocks")
+
+                # Valida que o GITHUB_OUTPUT foi escrito
+                output_content = Path("output_test.txt").read_text(encoding="utf-8")
+                log.info("\n── Outputs simulados para o GitHub ──\n%s", output_content)
+
+                self.assertIn("has_watched_match=true", output_content, "Deveria acusar match de interesse")
+                self.assertIn(
+                    "djerj_pdf_exists=true", output_content,
+                    "Deveria ter baixado o PDF do DJERJ via pdf.aspx/hdnPrintUrl",
+                )
+
+                tmp_pdfs = list((tmp_root / "tmp").glob("*.pdf"))
+                self.assertTrue(tmp_pdfs, "Nenhum PDF foi salvo em tmp/")
+                self.assertEqual(tmp_pdfs[0].read_bytes(), b"%PDF-1.4 Mocked PDF content" + b"0" * 1000)
+
+                log.info("✅ Pipeline completo validado com sucesso!")
+
+        finally:
+            main.ROOT, main.CONFIG_DIR, main.DATA_DIR = original_root, original_config_dir, original_data_dir
+            Path("output_test.txt").unlink(missing_ok=True)
 
 
 if __name__ == "__main__":
-    test_full_pipeline()
+    unittest.main()

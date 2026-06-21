@@ -12,7 +12,8 @@ import hashlib
 import httpx
 from datetime import datetime, timedelta
 from pathlib import Path
-from html import escape
+from html import escape, unescape
+from urllib.parse import urljoin
 
 from tjrj_portal import check_tjrj_portal
 from fgv_portal import check_fgv_portal
@@ -105,34 +106,52 @@ def set_output(key: str, value: str) -> None:
     log.info("OUTPUT %s=%s", key, safe_value)
 
 
+DJERJ_HOST = "https://www3.tjrj.jus.br"
+
+
+def _extract_djerj_pdf_url(html: str) -> str | None:
+    """
+    Extrai a URL real de download do PDF a partir do campo oculto hdnPrintUrl,
+    renderizado pelo servidor em pdf.aspx com um GUID novo a cada requisição.
+
+    O link antigo (gedcacheweb via App.PanelLoad.load) é JS morto deixado no
+    template da SPA ExtJS: aparece sempre com o mesmo GEDID fixo, não importa
+    a data/página pedida, e por isso nunca aponta pro diário correto.
+    """
+    match = re.search(r'id="hdnPrintUrl"\s+value="([^"]+)"', html)
+    if not match:
+        return None
+    return urljoin(DJERJ_HOST, unescape(match.group(1)))
+
+
 def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
     """Tenta baixar o PDF mais recente do DJERJ (Caderno I - Administrativo)."""
     today = datetime.now()
     dest_dir.mkdir(parents=True, exist_ok=True)
-    
+
     # Busca retrospectivamente para cobrir fins de semana, feriados e atrasos.
     for i in range(14):
         check_date = today - timedelta(days=i)
-        
+
         # O DJERJ normalmente e disponibilizado apenas de segunda a sexta.
         if check_date.weekday() >= 5:
             continue
-            
+
         date_str = check_date.strftime("%d/%m/%Y")
         iso_date = check_date.strftime("%Y-%m-%d")
         pdf_dest = dest_dir / f"djerj_{iso_date}.pdf"
-        
+
         if pdf_dest.exists() and pdf_dest.stat().st_size > 1000:
             log.info("PDF do DJERJ de %s já existe localmente: %s", date_str, pdf_dest)
             return pdf_dest
-            
-        url = "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx"
+
+        url = f"{DJERJ_HOST}/consultadje/pdf.aspx"
         params = {
             "dtPub": date_str,
             "caderno": "A",
             "pagina": "-1"
         }
-        
+
         headers = {
             "User-Agent": (
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -140,19 +159,17 @@ def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
                 "Chrome/124.0.0.0 Safari/537.36"
             )
         }
-        
+
         log.info("Verificando se existe edição do DJERJ para %s...", date_str)
         try:
             with httpx.Client(headers=headers, follow_redirects=True, timeout=30) as client:
                 resp = client.get(url, params=params)
                 resp.raise_for_status()
-                
-                # Busca o link do gedcacheweb no javascript da página
-                match = re.search(r"url:\s*'([^']+gedcacheweb/default\.aspx[^']+)'", resp.text)
-                if match:
-                    pdf_url = match.group(1)
+
+                pdf_url = _extract_djerj_pdf_url(resp.text)
+                if pdf_url:
                     log.info("Edição do DJERJ encontrada para %s. Baixando PDF...", date_str)
-                    
+
                     with client.stream("GET", pdf_url) as pdf_resp:
                         pdf_resp.raise_for_status()
                         with open(pdf_dest, "wb") as f:
@@ -170,7 +187,7 @@ def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
                     log.info("Edição do DJERJ de %s não encontrada ou sem PDF disponível.", date_str)
         except Exception as e:
             log.error("Erro ao tentar baixar PDF do DJERJ de %s: %s", date_str, e)
-            
+
     return None
 
 

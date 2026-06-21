@@ -91,13 +91,16 @@ jobs:
           force_orphan: false
           keep_files: true
 
-      # ── 6. Enviar e-mail diário (prioritário se houver match) ─────────────────
-      # O PDF do DJERJ vai ANEXADO neste mesmo e-mail quando cabe no limite do
-      # Gmail (djerj_pdf_attachable). Edições pesadas (ex.: homologação ~24 MB)
-      # não são anexáveis: o corpo traz o link da edição. Consolidar num único
-      # e-mail (em vez de um e-mail separado só com anexo) evita o filtro de spam.
-      - name: Enviar e-mail — ALERTA TJRJ 🚨
-        if: steps.scraper.outputs.has_watched_match == 'true'
+      # ── 6. E-mails (3 níveis, mutuamente exclusivos) ──────────────────────────
+      # O PDF do DJERJ vai ANEXADO no mesmo e-mail quando cabe no limite do Gmail
+      # (djerj_pdf_attachable); edições pesadas trazem o link no corpo. Níveis:
+      #   1) has_personal_match  -> SEU NOME/INSCRIÇÃO apareceu  (alerta máximo)
+      #   2) has_watched_match   -> palavra-chave genérica do concurso
+      #   3) caso contrário      -> relatório diário "sem novidades"
+
+      # ── Nível 1: SEU NOME/INSCRIÇÃO no Diário ────────────────────────────────
+      - name: Enviar e-mail — 🚨 SEU NOME no Diário Oficial
+        if: steps.scraper.outputs.has_personal_match == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -105,25 +108,26 @@ jobs:
           secure: false
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "🚨 URGENTE: Ocorrência TJRJ encontrada para ${{ steps.scraper.outputs.watched_matched_names }}!"
+          subject: "🚨🚨 SEU NOME no Diário Oficial do TJRJ — ${{ steps.scraper.outputs.personal_matched_names }} (${{ steps.scraper.outputs.edition_date }})"
           to: ${{ secrets.EMAIL_TO }}
           from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
           attachments: ${{ steps.scraper.outputs.djerj_pdf_attachable == 'true' && 'tmp/*.pdf' || '' }}
           html_body: |
             <html>
-            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f0f4f8;">
-              <div style="background: linear-gradient(135deg, #0e3a9e, #1a56db); color: white; padding: 28px 24px; border-radius: 12px 12px 0 0; text-align: center; border-bottom: 4px solid #d4af37;">
-                <h1 style="margin: 0; font-size: 22px; letter-spacing: 0.05em;">🏛️ TJRJ MONITOR — ALERTA</h1>
-                <p style="margin: 8px 0 0 0; opacity: 0.95; font-size: 15px; font-weight: bold;">
-                  🚨 Novo(s) match(es) encontrado(s) para: ${{ steps.scraper.outputs.watched_matched_names }}
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #fff5f5;">
+              <div style="background: linear-gradient(135deg, #c53030, #9b2c2c); color: white; padding: 28px 24px; border-radius: 12px 12px 0 0; text-align: center; border-bottom: 4px solid #f6e05e;">
+                <h1 style="margin: 0; font-size: 23px; letter-spacing: 0.04em;">🚨 SEU NOME SAIU NO DIÁRIO OFICIAL</h1>
+                <p style="margin: 10px 0 0 0; font-size: 16px; font-weight: bold;">
+                  ${{ steps.scraper.outputs.personal_matched_names }}
                 </p>
-                <p style="margin: 4px 0 0 0; opacity: 0.8; font-size: 13px;">Verificação em ${{ steps.scraper.outputs.edition_date }}</p>
+                <p style="margin: 4px 0 0 0; opacity: 0.85; font-size: 13px;">Publicação verificada em ${{ steps.scraper.outputs.edition_date }}</p>
               </div>
-              <div style="background: white; padding: 24px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
-                <div style="background: #ebf8ff; border-left: 4px solid #3182ce; padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
-                  <strong style="color: #2b6cb0; font-size: 16px;">🎯 Movimentação no Concurso/Diário!</strong>
-                  <p style="margin: 6px 0 0 0; color: #2d3748; font-size: 14px; line-height: 1.5;">
-                    Sua inscrição, nome ou menções ao cargo de <strong>Engenheiro de Dados</strong> apareceram nas fontes oficiais. Verifique os links abaixo imediatamente.
+              <div style="background: white; padding: 24px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 12px rgba(197,48,48,0.15); border: 2px solid #fc8181; border-top: none;">
+                <div style="background: #fff5f5; border-left: 4px solid #c53030; padding: 14px 16px; border-radius: 4px; margin-bottom: 20px;">
+                  <strong style="color: #c53030; font-size: 16px;">🎯 ATENÇÃO IMEDIATA — menção direta ao seu nome ou inscrição</strong>
+                  <p style="margin: 6px 0 0 0; color: #742a2a; font-size: 14px; line-height: 1.5;">
+                    O monitor encontrou seu <strong>nome</strong> ou <strong>número de inscrição</strong> nas fontes oficiais.
+                    Verifique abaixo e confirme prazos imediatamente.
                   </p>
                 </div>
 
@@ -133,8 +137,64 @@ jobs:
 
                 <div style="background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 20px; font-size: 14px; color: #2d3748;">
                   📎 <strong>PDF do Diário Oficial (DJERJ):</strong> anexado a este e-mail quando disponível.
-                  Você também pode abrir a edição direto no site oficial:
-                  <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">abrir edição no DJERJ</a>.
+                  Abrir a edição: <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">edição no DJERJ</a>
+                  &nbsp;·&nbsp; Consulta do Diário: <a href="https://www3.tjrj.jus.br/consultadje/">https://www3.tjrj.jus.br/consultadje/</a>
+                </div>
+
+                <div style="text-align: center; margin-top: 24px;">
+                  <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+                     style="display: inline-block; background: linear-gradient(135deg, #c53030, #9b2c2c); color: white; padding: 14px 28px;
+                            border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; border-bottom: 3px solid #f6e05e;">
+                    🔗 Acessar Painel do Candidato →
+                  </a>
+                </div>
+                <p style="color: #a0aec0; font-size: 11px; margin-top: 28px; border-top: 1px solid #edf2f7; padding-top: 12px; text-align: center;">
+                  Monitoramento automatizado · Atualizações de domingo a domingo às 11h e 23h (BRT)
+                </p>
+              </div>
+            </body>
+            </html>
+
+      # ── Nível 2: palavra-chave genérica do concurso (sem ser nome/inscrição) ──
+      - name: Enviar e-mail — ALERTA TJRJ 🚨
+        if: steps.scraper.outputs.has_watched_match == 'true' && steps.scraper.outputs.has_personal_match != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "🔔 Atualização do concurso TJRJ — ${{ steps.scraper.outputs.watched_matched_names }} (${{ steps.scraper.outputs.edition_date }})"
+          to: ${{ secrets.EMAIL_TO }}
+          from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
+          attachments: ${{ steps.scraper.outputs.djerj_pdf_attachable == 'true' && 'tmp/*.pdf' || '' }}
+          html_body: |
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f0f4f8;">
+              <div style="background: linear-gradient(135deg, #0e3a9e, #1a56db); color: white; padding: 28px 24px; border-radius: 12px 12px 0 0; text-align: center; border-bottom: 4px solid #d4af37;">
+                <h1 style="margin: 0; font-size: 22px; letter-spacing: 0.05em;">🏛️ TJRJ MONITOR — Atualização</h1>
+                <p style="margin: 8px 0 0 0; opacity: 0.95; font-size: 15px; font-weight: bold;">
+                  🔔 Palavra(s)-chave do concurso: ${{ steps.scraper.outputs.watched_matched_names }}
+                </p>
+                <p style="margin: 4px 0 0 0; opacity: 0.8; font-size: 13px;">Verificação em ${{ steps.scraper.outputs.edition_date }}</p>
+              </div>
+              <div style="background: white; padding: 24px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                <div style="background: #ebf8ff; border-left: 4px solid #3182ce; padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
+                  <strong style="color: #2b6cb0; font-size: 16px;">📌 Movimentação geral no concurso</strong>
+                  <p style="margin: 6px 0 0 0; color: #2d3748; font-size: 14px; line-height: 1.5;">
+                    Saiu um documento/aviso com palavra-chave de interesse (ainda <strong>não</strong> é menção direta ao seu nome ou inscrição). Confira abaixo.
+                  </p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                  ${{ steps.scraper.outputs.email_summary_html }}
+                </div>
+
+                <div style="background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 20px; font-size: 14px; color: #2d3748;">
+                  📎 <strong>PDF do Diário Oficial (DJERJ):</strong> anexado a este e-mail quando disponível.
+                  Abrir a edição: <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">edição no DJERJ</a>
+                  &nbsp;·&nbsp; Consulta do Diário: <a href="https://www3.tjrj.jus.br/consultadje/">https://www3.tjrj.jus.br/consultadje/</a>
                 </div>
 
                 <div style="text-align: center; margin-top: 24px;">
@@ -182,8 +242,8 @@ jobs:
 
                 <div style="background: #f7fafc; border: 1px solid #edf2f7; border-radius: 8px; padding: 14px 16px; margin-bottom: 20px; font-size: 14px; color: #4a5568;">
                   📎 <strong>PDF do Diário Oficial (DJERJ):</strong> anexado a este e-mail quando disponível.
-                  Você também pode abrir a edição direto no site oficial:
-                  <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">abrir edição no DJERJ</a>.
+                  Abrir a edição: <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">edição no DJERJ</a>
+                  &nbsp;·&nbsp; Consulta do Diário: <a href="https://www3.tjrj.jus.br/consultadje/">https://www3.tjrj.jus.br/consultadje/</a>
                 </div>
 
                 <div style="text-align: center;">

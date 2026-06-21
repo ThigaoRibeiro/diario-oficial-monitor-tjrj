@@ -17,7 +17,7 @@ from urllib.parse import urljoin
 
 from tjrj_portal import check_tjrj_portal
 from fgv_portal import check_fgv_portal
-from djerj_scraper import check_djerj
+from djerj_scraper import check_djerj, _is_probable_person_name
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,6 +39,31 @@ CONFIG_DIR.mkdir(exist_ok=True)
 def stable_id(prefix: str, value: str) -> str:
     digest = hashlib.sha1(value.encode("utf-8")).hexdigest()[:16]
     return f"{prefix}_{digest}"
+
+
+def _match_keywords(match: dict) -> list[str]:
+    """Lista as palavras-chave que dispararam um match, qualquer que seja a fonte."""
+    if match.get("matched_keywords"):
+        return list(match["matched_keywords"])
+    if "keyword" in match:
+        return [match["keyword"]]
+    return []
+
+
+def is_personal_match(match: dict) -> bool:
+    """
+    True quando o match foi por um IDENTIFICADOR PESSOAL — número de inscrição
+    (ex.: 397050352) ou nome próprio (ex.: THIAGO RIBEIRO DA SILVA) — e não por
+    uma palavra-chave genérica do concurso (RESULTADO, AVISO TJ, ENGENHEIRO DE
+    DADOS...). Serve para disparar um alerta diferenciado de "seu nome saiu".
+    """
+    for kw in _match_keywords(match):
+        kw = (kw or "").strip()
+        if kw.isdigit():                  # número de inscrição
+            return True
+        if _is_probable_person_name(kw):  # nome próprio (heurística do djerj_scraper)
+            return True
+    return False
 
 
 def load_config() -> dict:
@@ -337,8 +362,19 @@ def run() -> None:
         log.info("Reenviando %d matches anteriores por solicitação do workflow.", len(matches_for_email))
 
     has_watched_match = len(matches_for_email) > 0
+
+    # Match pessoal = nome/inscrição (dispara alerta diferenciado de "seu nome saiu").
+    personal_matches = [m for m in matches_for_email if is_personal_match(m)]
+    has_personal_match = len(personal_matches) > 0
+    personal_names = sorted({
+        kw.strip()
+        for m in personal_matches
+        for kw in _match_keywords(m)
+        if kw and (kw.strip().isdigit() or _is_probable_person_name(kw))
+    })
+
     matched_names = []
-    
+
     summary_lines = []
     summary_html = []
 
@@ -394,6 +430,8 @@ def run() -> None:
     unique_matched_names = list(set(matched_names))
 
     set_output("has_watched_match", "true" if has_watched_match else "false")
+    set_output("has_personal_match", "true" if has_personal_match else "false")
+    set_output("personal_matched_names", ", ".join(personal_names) if personal_names else "")
     set_output("watched_matched_names", ", ".join(unique_matched_names) if unique_matched_names else "Nenhum")
     set_output("edition_date", today_str)
     set_output("email_summary", " | ".join(summary_lines))

@@ -169,6 +169,8 @@ class FullPipelineTests(unittest.TestCase):
                 log.info("\n── Outputs simulados para o GitHub ──\n%s", output_content)
 
                 self.assertIn("has_watched_match=true", output_content, "Deveria acusar match de interesse")
+                # O mock do DJERJ contém a inscrição/nome -> alerta pessoal.
+                self.assertIn("has_personal_match=true", output_content, "Deveria acusar match pessoal (nome/inscrição)")
                 self.assertIn(
                     "djerj_pdf_exists=true", output_content,
                     "Deveria ter baixado o PDF do DJERJ via pdf.aspx/hdnPrintUrl",

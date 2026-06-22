@@ -1,6 +1,10 @@
 {
   "tjrj_documents": [
     {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-francisco-de-assis-martelini-junior-resultado-final"
+    },
+    {
       "title": "Resultado Final de Aprovados - Candidatos com Hipossuficiência Econômica",
       "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_candidatos_com_hipossuficiencia_economica"
     },
@@ -195,10 +199,6 @@
     {
       "title": "Execução de Mandados - Prova Tipo 1",
       "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-execucao-de-mandados-ns-a08-execucao-tipo-1"
-    },
-    {
-      "title": "Execução de Mandados - Prova Tipo 2",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-execucao-de-mandados-ns-a08-execucao-tipo-2"
     }
   ],
   "fgv_documents": [
@@ -1675,7 +1675,17 @@
       "source": "tjrj_portal",
       "detected_at": "2026-06-21T18:09:52.884873",
       "id": "tjrj_e516a51a6903db0c"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-francisco-de-assis-martelini-junior-resultado-final",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-06-22T18:15:52.730527",
+      "id": "tjrj_2c02e09dad0563fa"
     }
   ],
-  "last_update": "22/06/2026 07:26:20"
+  "last_update": "22/06/2026 18:15:52"
 }

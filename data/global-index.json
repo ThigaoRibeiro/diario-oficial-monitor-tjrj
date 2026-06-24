@@ -1,6 +1,10 @@
 {
   "tjrj_documents": [
     {
+      "title": "Convocação nº 16/2026",
+      "url": "https://portaltj.tjrj.jus.br/documents/d/guest/convocacao_n_16-2026"
+    },
+    {
       "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
       "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-francisco-de-assis-martelini-junior-resultado-final"
     },
@@ -195,10 +199,6 @@
     {
       "title": "Comissário de Justiça da Infância, da Juventude e do Idoso - Prova Tipo 4",
       "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-comissario-de-justica-da-infancia-da-juventude-e-do-idoso-ns-a04-comissario-tipo-4"
-    },
-    {
-      "title": "Execução de Mandados - Prova Tipo 1",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-execucao-de-mandados-ns-a08-execucao-tipo-1"
     }
   ],
   "fgv_documents": [
@@ -1685,7 +1685,17 @@
       "source": "tjrj_portal",
       "detected_at": "2026-06-22T18:15:52.730527",
       "id": "tjrj_2c02e09dad0563fa"
+    },
+    {
+      "title": "Convocação nº 16/2026",
+      "url": "https://portaltj.tjrj.jus.br/documents/d/guest/convocacao_n_16-2026",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-06-24T06:08:25.951815",
+      "id": "tjrj_8408c371a7b47e6d"
     }
   ],
-  "last_update": "23/06/2026 16:30:19"
+  "last_update": "24/06/2026 06:08:25"
 }

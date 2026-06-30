@@ -1306,5 +1306,15 @@
     "source": "djerj_search",
     "detected_at": "2026-06-30T06:13:47.130537",
     "id": "djerj_04e3c53fffba1357"
+  },
+  {
+    "title": "Convocação nº 17/2026",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_17-2026_aj",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-06-30T16:26:14.723720",
+    "id": "tjrj_d4334d7b000c7f03"
   }
 ]

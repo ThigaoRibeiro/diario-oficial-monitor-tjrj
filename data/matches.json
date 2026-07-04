@@ -1380,5 +1380,15 @@
     "source": "djerj_search",
     "detected_at": "2026-07-01T06:28:36.746747",
     "id": "djerj_56933e991a04e2c4"
+  },
+  {
+    "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final_0",
+    "matched_keywords": [
+      "RESULTADO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-07-04T05:47:17.070953",
+    "id": "tjrj_5311a02f4aa1a55b"
   }
 ]

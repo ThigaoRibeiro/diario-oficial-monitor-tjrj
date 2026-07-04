@@ -1,6 +1,14 @@
 {
   "tjrj_documents": [
     {
+      "title": "Ficha de Cadastro de Servidor Efetivo",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/ficha_de_cadastro_de_servidor_efetivo"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final_0"
+    },
+    {
       "title": "Convocação nº 17/2026",
       "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_17-2026_aj"
     },
@@ -191,14 +199,6 @@
     {
       "title": "Comissário de Justiça da Infância, da Juventude e do Idoso - Prova Tipo 1",
       "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-comissario-de-justica-da-infancia-da-juventude-e-do-idoso-ns-a04-comissario-tipo-1"
-    },
-    {
-      "title": "Comissário de Justiça da Infância, da Juventude e do Idoso - Prova Tipo 2",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-comissario-de-justica-da-infancia-da-juventude-e-do-idoso-ns-a04-comissario-tipo-2"
-    },
-    {
-      "title": "Comissário de Justiça da Infância, da Juventude e do Idoso - Prova Tipo 3",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-comissario-de-justica-da-infancia-da-juventude-e-do-idoso-ns-a04-comissario-tipo-3"
     }
   ],
   "fgv_documents": [
@@ -1785,7 +1785,17 @@
       "source": "djerj_search",
       "detected_at": "2026-07-01T06:28:36.746747",
       "id": "djerj_56933e991a04e2c4"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final_0",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-04T05:47:17.070953",
+      "id": "tjrj_5311a02f4aa1a55b"
     }
   ],
-  "last_update": "03/07/2026 15:55:55"
+  "last_update": "04/07/2026 05:47:17"
 }

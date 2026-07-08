@@ -1390,5 +1390,21 @@
     "source": "tjrj_portal",
     "detected_at": "2026-07-04T05:47:17.070953",
     "id": "tjrj_5311a02f4aa1a55b"
+  },
+  {
+    "title": "Mencao no DJERJ de 08/07/2026 (Pag. 33)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=08%2F07%2F2026&caderno=A&pagina=33",
+    "snippet": "dia 08/07/2026, caderno I - Administrativo, página 33, nrpagina 1",
+    "date": "2026-07-08",
+    "pagina": "33",
+    "caderno": "A",
+    "keyword": "ENGENHEIRO DE DADOS",
+    "matched_keywords": [
+      "ENGENHEIRO DE DADOS"
+    ],
+    "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 08/07/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-07-08T05:22:48.131538",
+    "id": "djerj_e9ae62808ae4c79e"
   }
 ]

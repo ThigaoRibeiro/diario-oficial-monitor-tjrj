@@ -1,5 +1,206 @@
 {
-  "tjrj_documents": [],
+  "tjrj_documents": [
+    {
+      "title": "Ficha de Cadastro de Servidor Efetivo",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/ficha_de_cadastro_de_servidor_efetivo"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final_0"
+    },
+    {
+      "title": "Convocação nº 17/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_17-2026_aj"
+    },
+    {
+      "title": "Convocação nº 16/2026",
+      "url": "https://portaltj.tjrj.jus.br/documents/d/guest/convocacao_n_16-2026"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-francisco-de-assis-martelini-junior-resultado-final"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos com Hipossuficiência Econômica",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_candidatos_com_hipossuficiencia_economica"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_-_resultado_final_de_aprovados_-_candidatos_indigenas"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_candidatos_negros"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Pessoas com Deficiência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_pessoas_com_deficiencia"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Ampla Concorrência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_ampla_concorrencia"
+    },
+    {
+      "title": "Aviso TJ nº 198/2026 – Resultado Final do LXII Concurso Público e Homologação do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-_198_-2026_-_resultado_final_do_lxii_cp_e_homologacao"
+    },
+    {
+      "title": "Aviso TJ nº 196/2026 – Resultado Definitivo da Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_196-2026_resultado_definitivo_da_avaliacao_de_titulos"
+    },
+    {
+      "title": "Aviso TJ nº 195/2026 – Republicação do Resultado Definitivo da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_195-2026_republicacao_do_resultado_definitivo_da_prova_discursiva"
+    },
+    {
+      "title": "Aviso TJ nº 192/2026 – Publicação do Resultado Definitivo da Avaliação de Títulos e do Resultado Final - Adiada",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_192-2026_aj"
+    },
+    {
+      "title": "Aviso TJ nº 189/2026 - Resultado Definitivo da Heteroidentificação dos Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-189-2026"
+    },
+    {
+      "title": "Aviso TJ nº 187/2026 – Resultado Definitivo da Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-187-2026"
+    },
+    {
+      "title": "Aviso TJ nº 171/2026 – Resultado Definitivo da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_171-2026_resultado_definitivo_da_prova_discursiva"
+    },
+    {
+      "title": "Aviso TJ nº 168/2026 – Publicação do Resultado Definitivo da Prova Discursiva - Adiada",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_168-2026_aj"
+    },
+    {
+      "title": "Aviso TJ nº 162/2026 – Resultado Preliminar da Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-162-2026-resultado-preliminar-da-avaliacao-de-titulos"
+    },
+    {
+      "title": "Aviso TJ nº 158/2026 - Resultado Preliminar da Heteroidentificação dos candidatos indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_158-2026_resultado_preliminar_da_heteroidentificacao_candidatos_indigenas_aj"
+    },
+    {
+      "title": "Aviso TJ nº 156/2026 – Resultado Preliminar da Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_156-2026_resultado_preliminar_da_heteroidentificacao-candidatos_negros_aj"
+    },
+    {
+      "title": "Aviso TJ nº 130/2026 – Resultado Preliminar da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_130-2026_resultado_preliminar_da_prova_discursiva"
+    },
+    {
+      "title": "Aviso TJ nº 123/2026 - Convocação para Heteroidentificação dos Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_123-2026_convocacao_heteroidentificacao_indigenas-analista"
+    },
+    {
+      "title": "Aviso TJ nº 120/2026 - Resultado da Análise Documental e Convocação para Heteroidentificação Telepresencial",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_120-2026_convocacao_heteroidentificacao_tjrj_aj_telepresencial"
+    },
+    {
+      "title": "Aviso TJ nº 118/2026 – Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_118-2026_cronograma_do_lxii_concurso_publico_aj"
+    },
+    {
+      "title": "Aviso TJ nº 117/2026 - Convocação para Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-117-2026-convocacao-para-avaliacao-de-titulos"
+    },
+    {
+      "title": "Aviso TJ nº 116/2026 - Resultado Definitivo das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-116-2026-resultado-definitivo-das-provas-objetivas-aj"
+    },
+    {
+      "title": "Aviso TJ nº 112/2026 - Republicação do Resultado Preliminar das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_112-2026_republicacao_do_resultado_preliminar_das_provas_objetivas"
+    },
+    {
+      "title": "Aviso TJ nº 96/2026 - Convocação para a Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_96-2026-convocacao_envio_documentos_heteroidentificacao_aj"
+    },
+    {
+      "title": "Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-94-2026-cronograma-do-lxii-concurso-publico"
+    },
+    {
+      "title": "Resultado Preliminar das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397_tjrj_analista_resultado_objetiva_preliminar_2026-03-06"
+    },
+    {
+      "title": "Gabarito Definitivo das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/tjrj_analista_gabarito_definitivo"
+    },
+    {
+      "title": "Aviso TJ nº 74/2026 – Gabarito Definitivo e Resultado Preliminar da Prova Objetiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_74-2026_gabarito_definitivo_e_resultado_preliminar_das_provas_objetivas_aj"
+    },
+    {
+      "title": "Quinta Retificação ao Edital nº 01/2025",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/5-retificacao_edital_de_abertura_tjrj_analista_judiciario"
+    },
+    {
+      "title": "Aviso TJ nº 70/2026 – Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_70-2026-cronograma_aj"
+    },
+    {
+      "title": "Aviso TJ nº 36/2026 - Gabarito Preliminar das Provas Objetivas e Cadernos das Provas Objetivas e Discursivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-36-2026-gabarito-preliminar-das-provas-objetivas-aj"
+    },
+    {
+      "title": "Gabarito Preliminar das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/gabarito-preliminar"
+    },
+    {
+      "title": "Assistente Social - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-1"
+    },
+    {
+      "title": "Assistente Social - Prova Tipo 2",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-2"
+    },
+    {
+      "title": "Assistente Social - Prova Tipo 3",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-3"
+    },
+    {
+      "title": "Assistente Social - Prova Tipo 4",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-4"
+    },
+    {
+      "title": "Médico Psiquiatra - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-medico-psiquiatra-ns-a06-medpsiquiatra-tipo-1"
+    },
+    {
+      "title": "Médico - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-medico-ns-a05-medico-tipo-1"
+    },
+    {
+      "title": "Psicólogo - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-psicologo-ns-a03-psicologo-tipo-1"
+    },
+    {
+      "title": "Psicólogo - Prova Tipo 2",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-psicologo-ns-a03-psicologo-tipo-2"
+    },
+    {
+      "title": "Psicólogo - Prova Tipo 3",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-psicologo-ns-a03-psicologo-tipo-3"
+    },
+    {
+      "title": "Psicólogo - Prova Tipo 4",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-psicologo-ns-a03-psicologo-tipo-4"
+    },
+    {
+      "title": "Contador - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-gestao-contador-ns-a07-contador-tipo-1"
+    },
+    {
+      "title": "Contador - Prova Tipo 2",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-gestao-contador-ns-a07-contador-tipo-2"
+    },
+    {
+      "title": "Comissário de Justiça da Infância, da Juventude e do Idoso - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-judicial-comissario-de-justica-da-infancia-da-juventude-e-do-idoso-ns-a04-comissario-tipo-1"
+    }
+  ],
   "fgv_documents": [
     {
       "title": "Cronograma Previsto",
@@ -1610,7 +1811,660 @@
       "source": "djerj_search",
       "detected_at": "2026-07-08T05:22:48.131538",
       "id": "djerj_e9ae62808ae4c79e"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final_0",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419121",
+      "id": "tjrj_5311a02f4aa1a55b"
+    },
+    {
+      "title": "Convocação nº 17/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_17-2026_aj",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419147",
+      "id": "tjrj_d4334d7b000c7f03"
+    },
+    {
+      "title": "Convocação nº 16/2026",
+      "url": "https://portaltj.tjrj.jus.br/documents/d/guest/convocacao_n_16-2026",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419153",
+      "id": "tjrj_8408c371a7b47e6d"
+    },
+    {
+      "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/comunicado-inclusao-sub-judice-francisco-de-assis-martelini-junior-resultado-final",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419181",
+      "id": "tjrj_2c02e09dad0563fa"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos com Hipossuficiência Econômica",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_candidatos_com_hipossuficiencia_economica",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419185",
+      "id": "tjrj_9864b8d01e94fec6"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_-_resultado_final_de_aprovados_-_candidatos_indigenas",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419188",
+      "id": "tjrj_87026b0a9a1f9da8"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_candidatos_negros",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419191",
+      "id": "tjrj_16a0499060e328e8"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Pessoas com Deficiência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_pessoas_com_deficiencia",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419194",
+      "id": "tjrj_d177fb25198dd570"
+    },
+    {
+      "title": "Resultado Final de Aprovados - Ampla Concorrência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista_resultado_final_de_aprovados_ampla_concorrencia",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419200",
+      "id": "tjrj_18e87a18a072de3c"
+    },
+    {
+      "title": "Aviso TJ nº 198/2026 – Resultado Final do LXII Concurso Público e Homologação do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-_198_-2026_-_resultado_final_do_lxii_cp_e_homologacao",
+      "matched_keywords": [
+        "RESULTADO",
+        "HOMOLOGAÇÃO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419203",
+      "id": "tjrj_49548b972158fd1d"
+    },
+    {
+      "title": "Aviso TJ nº 196/2026 – Resultado Definitivo da Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_196-2026_resultado_definitivo_da_avaliacao_de_titulos",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419206",
+      "id": "tjrj_0e5d96d2f8cf4cde"
+    },
+    {
+      "title": "Aviso TJ nº 195/2026 – Republicação do Resultado Definitivo da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_195-2026_republicacao_do_resultado_definitivo_da_prova_discursiva",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419209",
+      "id": "tjrj_3016626f41accbd1"
+    },
+    {
+      "title": "Aviso TJ nº 192/2026 – Publicação do Resultado Definitivo da Avaliação de Títulos e do Resultado Final - Adiada",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_192-2026_aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419213",
+      "id": "tjrj_5ab1e2b94daf4aa1"
+    },
+    {
+      "title": "Aviso TJ nº 189/2026 - Resultado Definitivo da Heteroidentificação dos Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-189-2026",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419216",
+      "id": "tjrj_6a2a0699e27dde1d"
+    },
+    {
+      "title": "Aviso TJ nº 187/2026 – Resultado Definitivo da Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-187-2026",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419218",
+      "id": "tjrj_efbbade4aa76215d"
+    },
+    {
+      "title": "Aviso TJ nº 171/2026 – Resultado Definitivo da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_171-2026_resultado_definitivo_da_prova_discursiva",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419221",
+      "id": "tjrj_0a1a98893db4e7f4"
+    },
+    {
+      "title": "Aviso TJ nº 168/2026 – Publicação do Resultado Definitivo da Prova Discursiva - Adiada",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_168-2026_aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419223",
+      "id": "tjrj_6c1a9bd06a675338"
+    },
+    {
+      "title": "Aviso TJ nº 162/2026 – Resultado Preliminar da Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-162-2026-resultado-preliminar-da-avaliacao-de-titulos",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419226",
+      "id": "tjrj_6bb7b411a70662eb"
+    },
+    {
+      "title": "Aviso TJ nº 158/2026 - Resultado Preliminar da Heteroidentificação dos candidatos indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_158-2026_resultado_preliminar_da_heteroidentificacao_candidatos_indigenas_aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419228",
+      "id": "tjrj_35e9ec47d1969a4a"
+    },
+    {
+      "title": "Aviso TJ nº 156/2026 – Resultado Preliminar da Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_156-2026_resultado_preliminar_da_heteroidentificacao-candidatos_negros_aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419231",
+      "id": "tjrj_d179e8d6b9e16df2"
+    },
+    {
+      "title": "Aviso TJ nº 130/2026 – Resultado Preliminar da Prova Discursiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_130-2026_resultado_preliminar_da_prova_discursiva",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419233",
+      "id": "tjrj_916b88a76aa82533"
+    },
+    {
+      "title": "Aviso TJ nº 123/2026 - Convocação para Heteroidentificação dos Candidatos Indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_123-2026_convocacao_heteroidentificacao_indigenas-analista",
+      "matched_keywords": [
+        "CONVOCAÇÃO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419236",
+      "id": "tjrj_7ee4690e92c82aaf"
+    },
+    {
+      "title": "Aviso TJ nº 120/2026 - Resultado da Análise Documental e Convocação para Heteroidentificação Telepresencial",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_120-2026_convocacao_heteroidentificacao_tjrj_aj_telepresencial",
+      "matched_keywords": [
+        "CONVOCAÇÃO",
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419240",
+      "id": "tjrj_c0108b51759f3570"
+    },
+    {
+      "title": "Aviso TJ nº 118/2026 – Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_118-2026_cronograma_do_lxii_concurso_publico_aj",
+      "matched_keywords": [
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419243",
+      "id": "tjrj_16ad50f240a95a61"
+    },
+    {
+      "title": "Aviso TJ nº 117/2026 - Convocação para Avaliação de Títulos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-117-2026-convocacao-para-avaliacao-de-titulos",
+      "matched_keywords": [
+        "CONVOCAÇÃO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419246",
+      "id": "tjrj_19a42bb5233e0f7a"
+    },
+    {
+      "title": "Aviso TJ nº 116/2026 - Resultado Definitivo das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-116-2026-resultado-definitivo-das-provas-objetivas-aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419248",
+      "id": "tjrj_e411b6c4208ec1df"
+    },
+    {
+      "title": "Aviso TJ nº 112/2026 - Republicação do Resultado Preliminar das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_112-2026_republicacao_do_resultado_preliminar_das_provas_objetivas",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419251",
+      "id": "tjrj_0a7679c9f603aa62"
+    },
+    {
+      "title": "Aviso TJ nº 96/2026 - Convocação para a Heteroidentificação dos Candidatos Negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_96-2026-convocacao_envio_documentos_heteroidentificacao_aj",
+      "matched_keywords": [
+        "CONVOCAÇÃO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419253",
+      "id": "tjrj_2e3952b6fd92cbb6"
+    },
+    {
+      "title": "Resultado Preliminar das Provas Objetivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397_tjrj_analista_resultado_objetiva_preliminar_2026-03-06",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419256",
+      "id": "tjrj_066bf628cf5734f1"
+    },
+    {
+      "title": "Aviso TJ nº 74/2026 – Gabarito Definitivo e Resultado Preliminar da Prova Objetiva",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_74-2026_gabarito_definitivo_e_resultado_preliminar_das_provas_objetivas_aj",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419258",
+      "id": "tjrj_93f3d4d9457c59c3"
+    },
+    {
+      "title": "Aviso TJ nº 70/2026 – Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_70-2026-cronograma_aj",
+      "matched_keywords": [
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419260",
+      "id": "tjrj_9fc467792baa9f7f"
+    },
+    {
+      "title": "Aviso TJ nº 36/2026 - Gabarito Preliminar das Provas Objetivas e Cadernos das Provas Objetivas e Discursivas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-36-2026-gabarito-preliminar-das-provas-objetivas-aj",
+      "matched_keywords": [
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419263",
+      "id": "tjrj_4b2d6aafce5cd865"
+    },
+    {
+      "title": "Engenheiro de Dados - Prova Tipo 1",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-tecnologia-da-informacao-engenheiro-de-dados-ns-a18-engenheirodados-tipo-1",
+      "matched_keywords": [
+        "ENGENHEIRO DE DADOS"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419267",
+      "id": "tjrj_0c738dd825e445fc"
+    },
+    {
+      "title": "Aviso TJ nº 04/2026 - Resultado Definitivo das Inscrições Indeferidas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-_04-2026_-_resultado_definitivo_das_inscricoes_indeferidas",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419270",
+      "id": "tjrj_7a9ceb9db90753f5"
+    },
+    {
+      "title": "Resultado Definitivo dos candidatos que tiveram seus pedidos para concorrer às vagas reservadas às pessoas com deficiência INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_-_pcd_indeferido",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419272",
+      "id": "tjrj_42ce460f1e3d2eee"
+    },
+    {
+      "title": "Resultado Definitivo dos candidatos que tiveram seus pedidos para concorrer às vagas destinadas às pessoas com hipossuficiência INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_-_pessoa_com_hipossuficiencia_economica_indeferidos",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419275",
+      "id": "tjrj_ad5bc26fbee4c406"
+    },
+    {
+      "title": "Aviso TJ nº 03/2026 - Resultado Definitivo das Inscrições Deferidas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n-_03-2026_-_resultado_definitivo_das_inscricoes_deferidas",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419279",
+      "id": "tjrj_e27016de7226ff8c"
+    },
+    {
+      "title": "Resultado Definitivo de homologação de inscrição dos candidatos que tiveram suas inscrições DEFERIDAS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_de_homologacao_de_inscricao_dos_candidatos_com_inscricoes_deferidas",
+      "matched_keywords": [
+        "RESULTADO",
+        "HOMOLOGAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419281",
+      "id": "tjrj_5d6cc9b8beaa4cd1"
+    },
+    {
+      "title": "Resultado Definitivo de Inscrição na Condição de Pessoa com Deficiência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_de_inscricao_na_condicao_de_pcd",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419284",
+      "id": "tjrj_453d12030f80c633"
+    },
+    {
+      "title": "Resultado Definitivo de Inscrição na Condição de Pessoa com Hipossuficiência Econômica",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_de_inscricao_na_condicao_de_pessoa_com_hipossuficiencia_economica",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419286",
+      "id": "tjrj_8c3b3a7b44725bfc"
+    },
+    {
+      "title": "Resultado Definitivo de candidatos que manifestaram interesse em concorrer às vagas destinadas aos candidatos negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_-_negros",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419289",
+      "id": "tjrj_f18dbbf8bed16c82"
+    },
+    {
+      "title": "Resultado Definitivo de candidatos que manifestaram interesse em concorrer às vagas destinadas aos candidatos indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj_-_resultado_definitivo_-_indigenas",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419292",
+      "id": "tjrj_c235b46f56738342"
+    },
+    {
+      "title": "Aviso TJ nº 02/2026 - Resultado Definitivo da Análise dos Pedidos de Atendimentos Especiais - Integralmente Deferidos, Parcialmente Deferidos e Indeferidos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_02-2026_resultado_definitivo_da_analise_dos_pedidos_de_atendimentos_especiais-1",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419294",
+      "id": "tjrj_975a771e3b0749d7"
+    },
+    {
+      "title": "Resultado Definitivo de candidatos que tiveram seus pedidos de atendimentos especiais INTEGRALMENTE DEFERIDOS, PARCIALMENTE DEFERIDOS e INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj-resultado-definitivo-de-candidatos-integralmente-e-parcialmente_deferidos_e_indeferidos",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419296",
+      "id": "tjrj_ee1b1f8e5b2d2473"
+    },
+    {
+      "title": "Aviso TJ nº 331 - Resultado Preliminar das Inscrições Indeferidas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-331-2025-resultado-preliminar-de-homologacao-de-inscricao-indeferido",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419299",
+      "id": "tjrj_a798dda87904eaa0"
+    },
+    {
+      "title": "Resultado Preliminar dos candidatos que tiveram seus pedidos para concorrer às vagas reservadas às pessoas com deficiência INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj-resultado-preliminar-pcd-indeferidos",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419303",
+      "id": "tjrj_b2cef28fc1496230"
+    },
+    {
+      "title": "Resultado Preliminar dos candidatos que tiveram seus pedidos para concorrer às vagas destinadas às pessoas com hipossuficiência INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj-resultado-preliminar-hipossuficiencia-indeferidos",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419307",
+      "id": "tjrj_4f4cee9cb74bac9d"
+    },
+    {
+      "title": "Aviso TJ nº 330 - Resultado Preliminar das Inscrições Deferidas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-330-2025-resultado-preliminar-de-homologacao-de-inscricao-deferido-1",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419312",
+      "id": "tjrj_d0f0669c3f4bdcbd"
+    },
+    {
+      "title": "Resultado preliminar de homologação de inscrição dos candidatos que tiveram suas inscrições DEFERIDAS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397-tjrj-homologados-preliminar-com-anexo",
+      "matched_keywords": [
+        "RESULTADO",
+        "HOMOLOGAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419315",
+      "id": "tjrj_6b629b7be56fcbc2"
+    },
+    {
+      "title": "Resultado preliminar de Inscrição na Condição de Pessoa com Deficiência",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/resultado-preliminar-na-condicao-de-pessoa-com-deficiencia",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419317",
+      "id": "tjrj_b9a1fc2d57662080"
+    },
+    {
+      "title": "Resultado preliminar de Inscrição na Condição de Pessoa com Hipossuficiência Econômica",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/resultado-preliminar-na-condicao-de-pessoa-com-hipossuficiencia-economica",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419320",
+      "id": "tjrj_459cf49c6d53fb60"
+    },
+    {
+      "title": "Resultado preliminar de candidatos que manifestaram interesse em concorrer às vagas destinadas aos candidatos negros",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj-resultado-preliminar-candidatos-negros",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419324",
+      "id": "tjrj_a4a30025cc092716"
+    },
+    {
+      "title": "Resultado preliminar de candidatos que manifestaram interesse em concorrer às vagas destinadas aos candidatos indígenas",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aj-resultado-preliminar-candidatos-indigenas",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419326",
+      "id": "tjrj_5a03288f49dbcdd8"
+    },
+    {
+      "title": "Aviso TJ nº 329 - Resultado Preliminar da Análise dos Pedidos de Atendimentos Especiais - Integralmente Deferidos, Parcialmente Deferidos e Indeferidos",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso-tj-n-329-2025-resultado-preliminar-da-analise-dos-pedidos-de-atendimentos-especiais-1",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419331",
+      "id": "tjrj_b3497e0ee916d481"
+    },
+    {
+      "title": "Resultado preliminar de candidatos que tiveram seus pedidos de atendimentos especiais INTEGRALMENTE DEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397-tjrj-preliminar-pne-integralmente-deferido",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419333",
+      "id": "tjrj_6e5cd66441dec157"
+    },
+    {
+      "title": "Resultado preliminar de candidatos que tiveram seus pedidos de atendimentos especiais PARCIALMENTE DEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397-tjrj-preliminar-pne-parcialmente-deferido",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419336",
+      "id": "tjrj_7a9d538ba521f298"
+    },
+    {
+      "title": "Resultado preliminar de candidatos que tiveram seus pedidos de atendimentos especiais INDEFERIDOS",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/397-tjrj-preliminar-pne-indeferido",
+      "matched_keywords": [
+        "RESULTADO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419338",
+      "id": "tjrj_038964fffb09d63c"
+    },
+    {
+      "title": "Aviso TJ nº 294-2025 – Resultado Definitivo da Análise dos Pedidos de Isenção – Indeferido",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_294-2025-1",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419341",
+      "id": "tjrj_f611183b5cd34cef"
+    },
+    {
+      "title": "Aviso TJ nº 293-2025 – Resultado Definitivo da Análise dos Pedidos de Isenção - Deferido",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_293-2025-1",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419343",
+      "id": "tjrj_c535a67bad3669f4"
+    },
+    {
+      "title": "Aviso TJ nº 287-2025 – Cronograma do Concurso",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_287-2025-cronograma_do_concurso",
+      "matched_keywords": [
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419347",
+      "id": "tjrj_a49362cc721cde43"
+    },
+    {
+      "title": "Aviso TJ nº 286-2025 – Resultado Preliminar da Análise dos Pedidos de Isenção – Indeferido",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_286-2025_resultado_preliminar_da_analise_dos_pedidos_de_isencao_indeferido",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419350",
+      "id": "tjrj_314d2dd25c851d50"
+    },
+    {
+      "title": "Aviso TJ nº 285-2025 – Resultado Preliminar da Análise dos Pedidos de Isenção - Deferido",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_285-2025-resultado_preliminar_da_analise_dos_pedidos_de_isencao_deferido",
+      "matched_keywords": [
+        "RESULTADO",
+        "AVISO TJ"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-07-12T15:04:18.419352",
+      "id": "tjrj_e516a51a6903db0c"
     }
   ],
-  "last_update": "12/07/2026 05:29:34"
+  "last_update": "12/07/2026 15:04:18"
 }

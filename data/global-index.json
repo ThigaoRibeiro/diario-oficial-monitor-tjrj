@@ -2,7 +2,7 @@
   "tjrj_documents": [
     {
       "title": "Ficha de Cadastro de Servidor Efetivo",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/ficha_de_cadastro_de_servidor_efetivo"
+      "url": "https://www.tjrj.jus.br/documents/d/guest/ficha_de_cadastro_de_servidor_efetivo-2"
     },
     {
       "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
@@ -208,6 +208,10 @@
     },
     {
       "title": "Comunicado - Inclusão Sub Judice",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/comunicado-inclusao-sub-judice-claudio-da-silva-lima-junior-resultado-final-apos-revogacao-liminar.pdf"
+    },
+    {
+      "title": "Comunicado - Inclusão Sub Judice",
       "url": "https://conhecimento.fgv.br/sites/default/files/concursos/comunicado-inclusao-sub-judice-fabiana-mello-paes-barreto-convocacao-titulos_.pdf"
     },
     {
@@ -397,10 +401,6 @@
     {
       "title": "Tipo 2",
       "url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-2.pdf"
-    },
-    {
-      "title": "Tipo 3",
-      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-3.pdf"
     }
   ],
   "matches": [
@@ -2482,5 +2482,5 @@
       "id": "djerj_75d8a7bb7096149e"
     }
   ],
-  "last_update": "28/07/2026 16:08:06"
+  "last_update": "29/07/2026 05:22:52"
 }

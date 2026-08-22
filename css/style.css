@@ -194,6 +194,21 @@ a:hover { color: var(--gold); text-decoration: underline; }
   border-color: rgba(212, 175, 55, 0.7);
 }
 
+/* Card Destacado (Convocação do Cargo) */
+.card.cargo-convocacao {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #221010 0%, #0b1224 100%);
+  box-shadow: 0 4px 24px rgba(239, 68, 68, 0.15), var(--shadow-card);
+}
+.card.cargo-convocacao::before {
+  background: linear-gradient(90deg, #dc2626, #f97316, #eab308);
+}
+.card.cargo-convocacao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.6), 0 0 28px rgba(239, 68, 68, 0.4);
+  border-color: rgba(239, 68, 68, 0.7);
+}
+
 @keyframes pulse-glow {
   0% { box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), var(--shadow-card); }
   100% { box-shadow: 0 4px 28px rgba(212, 175, 55, 0.25), var(--shadow-card); }

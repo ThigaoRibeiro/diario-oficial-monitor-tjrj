@@ -103,16 +103,23 @@ elTabs.forEach(tab => {
 
 function renderCard(item, q, type = "document") {
   const titleUpper = item.title.toUpperCase();
+  const snippetUpper = (item.snippet || "").toUpperCase();
+  const kwsUpper = (item.matched_keywords || []).map(k => k.toUpperCase());
+  const allText = titleUpper + " " + snippetUpper + " " + kwsUpper.join(" ");
+
   const isWatched = watchName && (
     titleUpper.includes(watchName.toUpperCase()) || 
-    (item.snippet && item.snippet.toUpperCase().includes(watchName.toUpperCase()))
+    snippetUpper.includes(watchName.toUpperCase())
   );
-  
-  // Destaque de outros termos como Engenheiro de Dados se não for seu nome
-  const isDataEng = titleUpper.includes("ENGENHEIRO DE DADOS") || titleUpper.includes("CONVOCAÇÃO") || titleUpper.includes("NOMEAÇÃO");
+
+  const isCargoConvocacao = (allText.includes("ENGENHEIRO DE DADOS") || allText.includes("ENGENHARIA DE DADOS")) &&
+    (allText.includes("CONVOCAÇÃO") || allText.includes("CONVOCACAO") || allText.includes("NOMEAÇÃO") || allText.includes("NOMEACAO") || allText.includes("POSSE"));
+
+  const isDataEng = allText.includes("ENGENHEIRO DE DADOS") || allText.includes("CONVOCAÇÃO") || allText.includes("NOMEAÇÃO");
   
   let cardClass = "card";
   if (isWatched) cardClass = "card highlighted";
+  else if (isCargoConvocacao) cardClass = "card cargo-convocacao";
 
   const classifBadge = isWatched && titleUpper.includes("THIAGO") 
     ? `<span class="card-classif" style="background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(212,175,55,.3); font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-left: 5px;">11º</span>` 
@@ -120,9 +127,11 @@ function renderCard(item, q, type = "document") {
 
   const watchBadge = isWatched 
     ? `<span class="card-watch-badge">🎯 Monitorado</span>` 
-    : isDataEng 
-      ? `<span class="card-watch-badge" style="background: rgba(59,130,246,.1); color: var(--blue-light); border-color: rgba(59,130,246,.25);">⚡ Interesse</span>`
-      : "";
+    : isCargoConvocacao
+      ? `<span class="card-watch-badge" style="background: rgba(239,68,68,.15); color: #f87171; border-color: rgba(239,68,68,.35);">🚨 CONVOCAÇÃO ENGENHARIA DE DADOS</span>`
+      : isDataEng 
+        ? `<span class="card-watch-badge" style="background: rgba(59,130,246,.1); color: var(--blue-light); border-color: rgba(59,130,246,.25);">⚡ Interesse</span>`
+        : "";
 
   let icon = "📄";
   if (type === "djerj") icon = "📰";

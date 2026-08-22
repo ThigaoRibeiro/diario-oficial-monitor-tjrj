@@ -66,6 +66,24 @@ def is_personal_match(match: dict) -> bool:
     return False
 
 
+def is_cargo_convocacao_match(match: dict) -> bool:
+    """
+    True quando o match indica uma convocação, nomeação ou exame especificamente para
+    o cargo de Engenheiro de Dados. Permite disparar alerta com aviso de movimentação da fila.
+    """
+    kws = [kw.upper() for kw in _match_keywords(match)]
+    title = (match.get("title") or "").upper()
+    snippet = (match.get("snippet") or "").upper()
+    all_text = " ".join(kws + [title, snippet])
+
+    has_cargo = "ENGENHEIRO DE DADOS" in all_text or "ENGENHARIA DE DADOS" in all_text
+    has_action = any(
+        act in all_text
+        for act in ["CONVOCAÇÃO", "CONVOCACAO", "NOMEAÇÃO", "NOMEACAO", "POSSE", "AVALIAÇÃO MÉDICA", "AVALIACAO MEDICA", "HOMOLOGAÇÃO", "HOMOLOGACAO"]
+    )
+    return has_cargo and has_action
+
+
 def load_config() -> dict:
     """Carrega as palavras-chave do config/monitorados.json com fallbacks seguros e mescla com a env WATCH_NAMES."""
     config_path = CONFIG_DIR / "monitorados.json"
@@ -191,7 +209,7 @@ def download_latest_djerj_pdf(dest_dir: Path) -> Path | None:
 
         log.info("Verificando se existe edição do DJERJ para %s...", date_str)
         try:
-            with httpx.Client(headers=headers, follow_redirects=True, timeout=60) as client:
+            with httpx.Client(headers=headers, follow_redirects=True, timeout=60, verify=False) as client:
                 resp = client.get(url, params=params)
                 resp.raise_for_status()
 
@@ -373,6 +391,10 @@ def run() -> None:
         if kw and (kw.strip().isdigit() or _is_probable_person_name(kw))
     })
 
+    # Match de convocação do cargo = Engenheiro de Dados + convocação/nomeação/posse
+    cargo_convocacao_matches = [m for m in matches_for_email if is_cargo_convocacao_match(m)]
+    has_cargo_convocacao_match = len(cargo_convocacao_matches) > 0
+
     matched_names = []
 
     summary_lines = []
@@ -388,7 +410,7 @@ def run() -> None:
             summary_html.append("<h2 style='color: #e53e3e;'>🚨 Reenvio das últimas ocorrências encontradas:</h2>")
         
         for m in matches_for_email:
-            src = "Diário Oficial" if m["source"] == "djerj_search" else "Página do Concurso"
+            src = "Diário Oficial" if m["source"] in {"djerj_search", "djerj_portal", "djerj"} else "Página do Concurso"
             title = m["title"]
             url = m["url"]
             
@@ -404,9 +426,15 @@ def run() -> None:
                 detail_text = f" (Pesquisa: {m['keyword']})"
 
             snippet_html = f'<br><span style="font-size: 13px; color: #555;">{escape(m["snippet"])}</span>' if 'snippet' in m else ''
+            
+            # Destaque vermelho/dourado para convocações do cargo
+            border_color = "#e53e3e" if is_cargo_convocacao_match(m) else "#d4af37"
+            bg_color = "#fff5f5" if is_cargo_convocacao_match(m) else "#f8f9fa"
+            cargo_tag = " <strong style='color: #c53030;'>[🚨 CONVOCAÇÃO ENGENHARIA DE DADOS]</strong>" if is_cargo_convocacao_match(m) else ""
+
             summary_html.append(
-                f"<div style='border-left: 4px solid #d4af37; background: #f8f9fa; padding: 12px; margin-bottom: 12px;'>"
-                f"<strong>[{src}]</strong> <a href='{url}' style='color: #0e3a9e; font-weight: bold;'>{escape(title)}</a>{escape(detail_text)}"
+                f"<div style='border-left: 4px solid {border_color}; background: {bg_color}; padding: 12px; margin-bottom: 12px;'>"
+                f"<strong>[{src}]</strong>{cargo_tag} <a href='{url}' style='color: #0e3a9e; font-weight: bold;'>{escape(title)}</a>{escape(detail_text)}"
                 f"{snippet_html}"
                 f"</div>"
             )
@@ -431,6 +459,7 @@ def run() -> None:
 
     set_output("has_watched_match", "true" if has_watched_match else "false")
     set_output("has_personal_match", "true" if has_personal_match else "false")
+    set_output("has_cargo_convocacao_match", "true" if has_cargo_convocacao_match else "false")
     set_output("personal_matched_names", ", ".join(personal_names) if personal_names else "")
     set_output("watched_matched_names", ", ".join(unique_matched_names) if unique_matched_names else "Nenhum")
     set_output("edition_date", today_str)

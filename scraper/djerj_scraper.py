@@ -267,7 +267,7 @@ def search_djerj_keyword_date(
 
     close_client = client is None
     if client is None:
-        client = httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30)
+        client = httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30, verify=False)
 
     try:
         resp = client.get(SEARCH_URL, params=params)
@@ -325,7 +325,7 @@ def check_djerj(
     """
     all_results_by_url: dict[str, dict] = {}
 
-    with httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30) as client:
+    with httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30, verify=False) as client:
         for check_date in iter_business_dates(start_date, business_days=days_to_check):
             for keyword in keywords:
                 for result in search_djerj_keyword_date(

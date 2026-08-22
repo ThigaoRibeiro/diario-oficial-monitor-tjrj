@@ -155,9 +155,66 @@ jobs:
             </body>
             </html>
 
-      # ── Nível 2: palavra-chave genérica do concurso (sem ser nome/inscrição) ──
-      - name: Enviar e-mail — ALERTA TJRJ 🚨
-        if: steps.scraper.outputs.has_watched_match == 'true' && steps.scraper.outputs.has_personal_match != 'true'
+      # ── Nível 2: CONVOCAÇÃO / NOMEAÇÃO DO CARGO ENGENHEIRO DE DADOS ──────────────
+      - name: Enviar e-mail — 🚨 CONVOCAÇÃO ENGENHARIA DE DADOS
+        if: steps.scraper.outputs.has_cargo_convocacao_match == 'true' && steps.scraper.outputs.has_personal_match != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "🚨 CONVOCAÇÃO DE ENGENHEIRO DE DADOS NO TJRJ — Fila em Andamento! (${{ steps.scraper.outputs.edition_date }})"
+          to: ${{ secrets.EMAIL_TO }}
+          from: "TJRJ Monitor <${{ secrets.EMAIL_USERNAME }}>"
+          attachments: ${{ steps.scraper.outputs.djerj_pdf_attachable == 'true' && 'tmp/*.pdf' || '' }}
+          html_body: |
+            <html>
+            <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #fffaf0;">
+              <div style="background: linear-gradient(135deg, #dd6b20, #c05621); color: white; padding: 28px 24px; border-radius: 12px 12px 0 0; text-align: center; border-bottom: 4px solid #f6e05e;">
+                <h1 style="margin: 0; font-size: 22px; letter-spacing: 0.04em;">🚨 CONVOCAÇÃO DE ENGENHEIROS DE DADOS PUBLICADA</h1>
+                <p style="margin: 8px 0 0 0; font-size: 15px; font-weight: bold;">
+                  A lista de aprovados em Engenharia de Dados começou a ser chamada!
+                </p>
+                <p style="margin: 4px 0 0 0; opacity: 0.85; font-size: 13px;">Publicação verificada em ${{ steps.scraper.outputs.edition_date }}</p>
+              </div>
+              <div style="background: white; padding: 24px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 12px rgba(221,107,32,0.15); border: 2px solid #fbd38d; border-top: none;">
+                <div style="background: #fffaf0; border-left: 4px solid #dd6b20; padding: 14px 16px; border-radius: 4px; margin-bottom: 20px;">
+                  <strong style="color: #c05621; font-size: 16px;">🔥 AVISO IMPORTANTE — Movimentação direta na sua especialidade</strong>
+                  <p style="margin: 6px 0 0 0; color: #7b341e; font-size: 14px; line-height: 1.5;">
+                    Foi publicada uma <strong>Convocação / Nomeação</strong> especificamente para a especialidade de <strong>Engenheiro de Dados</strong>.
+                    Fique atendo ao andamento das convocações da sua lista!
+                  </p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                  ${{ steps.scraper.outputs.email_summary_html }}
+                </div>
+
+                <div style="background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 20px; font-size: 14px; color: #2d3748;">
+                  📎 <strong>PDF do Diário Oficial (DJERJ):</strong> anexado a este e-mail quando disponível.
+                  Abrir a edição: <a href="${{ steps.scraper.outputs.djerj_pdf_url }}">edição no DJERJ</a>
+                  &nbsp;·&nbsp; Consulta do Diário: <a href="https://www3.tjrj.jus.br/consultadje/">https://www3.tjrj.jus.br/consultadje/</a>
+                </div>
+
+                <div style="text-align: center; margin-top: 24px;">
+                  <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+                     style="display: inline-block; background: linear-gradient(135deg, #dd6b20, #c05621); color: white; padding: 14px 28px;
+                            border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; border-bottom: 3px solid #f6e05e;">
+                    🔗 Acessar Painel do Candidato →
+                  </a>
+                </div>
+                <p style="color: #a0aec0; font-size: 11px; margin-top: 28px; border-top: 1px solid #edf2f7; padding-top: 12px; text-align: center;">
+                  Monitoramento automatizado · Atualizações de domingo a domingo às 11h e 23h (BRT)
+                </p>
+              </div>
+            </body>
+            </html>
+
+      # ── Nível 3: palavra-chave genérica do concurso (sem ser convocação do cargo nem nome) ──
+      - name: Enviar e-mail — ALERTA TJRJ 🔔
+        if: steps.scraper.outputs.has_watched_match == 'true' && steps.scraper.outputs.has_personal_match != 'true' && steps.scraper.outputs.has_cargo_convocacao_match != 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com

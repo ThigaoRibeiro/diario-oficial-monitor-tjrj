@@ -3,6 +3,7 @@ tjrj_portal.py — Scraper para a página oficial do concurso TJRJ.
 """
 
 import urllib.request
+import ssl
 import re
 import logging
 from bs4 import BeautifulSoup
@@ -32,8 +33,9 @@ def fetch_tjrj_documents() -> list[dict]:
     
     try:
         req = urllib.request.Request(PORTAL_URL, headers=HEADERS)
+        ssl_ctx = ssl._create_unverified_context()
         # O portal TJRJ retorna cabeçalhos Transfer-Encoding duplicados. urllib.request trata isso com tolerância.
-        with urllib.request.urlopen(req, timeout=30) as response:
+        with urllib.request.urlopen(req, timeout=30, context=ssl_ctx) as response:
             html = response.read().decode("utf-8", errors="ignore")
     except Exception as e:
         log.error("Erro ao acessar portal TJRJ: %s", e)

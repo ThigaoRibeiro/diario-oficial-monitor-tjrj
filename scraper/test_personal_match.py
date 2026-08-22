@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from main import is_personal_match
+from main import is_personal_match, is_cargo_convocacao_match
 
 
 class IsPersonalMatchTests(unittest.TestCase):
@@ -34,6 +34,30 @@ class IsPersonalMatchTests(unittest.TestCase):
 
     def test_no_keywords_is_not_personal(self):
         self.assertFalse(is_personal_match({"title": "algo", "url": "x"}))
+
+
+class IsCargoConvocacaoMatchTests(unittest.TestCase):
+    def test_convocacao_engenheiro_de_dados_matches(self):
+        match = {
+            "title": "Mencao no DJERJ de 21/08/2026 (Pag. 6)",
+            "matched_keywords": ["ENGENHEIRO DE DADOS", "CONVOCAÇÃO"],
+            "snippet": "Convocação no LXII Concurso Público para Analista Judiciário - Engenheiro de Dados"
+        }
+        self.assertTrue(is_cargo_convocacao_match(match))
+
+    def test_nomeacao_engenheiro_de_dados_matches(self):
+        match = {
+            "title": "Nomeação de Analista Judiciário - Engenheiro de Dados",
+            "matched_keywords": ["ENGENHEIRO DE DADOS", "NOMEAÇÃO"],
+        }
+        self.assertTrue(is_cargo_convocacao_match(match))
+
+    def test_generic_result_without_convocacao_does_not_match(self):
+        match = {
+            "title": "Aviso de Gabarito de Prova",
+            "matched_keywords": ["RESULTADO"],
+        }
+        self.assertFalse(is_cargo_convocacao_match(match))
 
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ def fetch_fgv_documents() -> list[dict]:
     log.info("Buscando documentos do portal FGV...")
     
     try:
-        with httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30) as client:
+        with httpx.Client(headers=HEADERS, follow_redirects=True, timeout=30, verify=False) as client:
             resp = client.get(FGV_URL)
             resp.raise_for_status()
     except Exception as e:

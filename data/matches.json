@@ -2487,5 +2487,53 @@
     "source": "djerj_search",
     "detected_at": "2026-08-22T09:53:46.959741",
     "id": "djerj_072a4e8d517d82d3"
+  },
+  {
+    "title": "Mencao no DJERJ de 24/08/2026 (Pag. 30)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=24%2F08%2F2026&caderno=A&pagina=30",
+    "snippet": "dia 24/08/2026, caderno I - Administrativo, página 30, nrpagina 1",
+    "date": "2026-08-24",
+    "pagina": "30",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 24/08/2026 . (total de 3 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-08-24T03:04:14.390692",
+    "id": "djerj_3bb76112cb995d36"
+  },
+  {
+    "title": "Mencao no DJERJ de 24/08/2026 (Pag. 2)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=24%2F08%2F2026&caderno=A&pagina=2",
+    "snippet": "dia 24/08/2026, caderno I - Administrativo, página 2, nrpagina 1",
+    "date": "2026-08-24",
+    "pagina": "2",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 24/08/2026 . (total de 3 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-08-24T03:04:14.390723",
+    "id": "djerj_c148b2626345bcae"
+  },
+  {
+    "title": "Mencao no DJERJ de 24/08/2026 (Pag. 17)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=24%2F08%2F2026&caderno=A&pagina=17",
+    "snippet": "dia 24/08/2026, caderno I - Administrativo, página 17, nrpagina 1",
+    "date": "2026-08-24",
+    "pagina": "17",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 24/08/2026 . (total de 3 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-08-24T03:04:14.390727",
+    "id": "djerj_28d825cabd845a1b"
   }
 ]

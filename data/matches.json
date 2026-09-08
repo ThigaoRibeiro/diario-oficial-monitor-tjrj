@@ -3320,5 +3320,37 @@
     "source": "djerj_search",
     "detected_at": "2026-09-04T07:00:04.861710",
     "id": "djerj_08c3c0ad9b80b893"
+  },
+  {
+    "title": "Mencao no DJERJ de 08/09/2026 (Pag. 25)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=08%2F09%2F2026&caderno=A&pagina=25",
+    "snippet": "dia 08/09/2026, caderno I - Administrativo, página 25, nrpagina 1",
+    "date": "2026-09-08",
+    "pagina": "25",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 08/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-08T06:58:54.532936",
+    "id": "djerj_de3f95b089f484f1"
+  },
+  {
+    "title": "Mencao no DJERJ de 08/09/2026 (Pag. 50)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=08%2F09%2F2026&caderno=A&pagina=50",
+    "snippet": "dia 08/09/2026, caderno I - Administrativo, página 50, nrpagina 1",
+    "date": "2026-09-08",
+    "pagina": "50",
+    "caderno": "A",
+    "keyword": "NOMEAÇÃO",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 08/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-08T06:58:54.532967",
+    "id": "djerj_4745b3372859330b"
   }
 ]

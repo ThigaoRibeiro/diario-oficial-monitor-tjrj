@@ -3885,7 +3885,55 @@
       "source": "djerj_search",
       "detected_at": "2026-09-11T07:03:44.705640",
       "id": "djerj_f83c7cd91ee9f19b"
+    },
+    {
+      "title": "Mencao no DJERJ de 14/09/2026 (Pag. 63)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=14%2F09%2F2026&caderno=A&pagina=63",
+      "snippet": "dia 14/09/2026, caderno I - Administrativo, página 63, nrpagina 1",
+      "date": "2026-09-14",
+      "pagina": "63",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 14/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-14T07:38:15.798734",
+      "id": "djerj_958462678b528d51"
+    },
+    {
+      "title": "Mencao no DJERJ de 14/09/2026 (Pag. 62)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=14%2F09%2F2026&caderno=A&pagina=62",
+      "snippet": "dia 14/09/2026, caderno I - Administrativo, página 62, nrpagina 1",
+      "date": "2026-09-14",
+      "pagina": "62",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 14/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-14T07:38:15.798763",
+      "id": "djerj_ca9a403da5bb4406"
+    },
+    {
+      "title": "Mencao no DJERJ de 14/09/2026 (Pag. 67)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=14%2F09%2F2026&caderno=A&pagina=67",
+      "snippet": "dia 14/09/2026, caderno I - Administrativo, página 67, nrpagina 1",
+      "date": "2026-09-14",
+      "pagina": "67",
+      "caderno": "A",
+      "keyword": "NOMEAÇÃO",
+      "matched_keywords": [
+        "NOMEAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 14/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-14T07:38:15.798768",
+      "id": "djerj_2eeea97edbd8f585"
     }
   ],
-  "last_update": "13/09/2026 17:22:07"
+  "last_update": "14/09/2026 07:38:15"
 }

@@ -22,4 +22,5 @@ Toda vez que o usuário interagir neste workspace ou perguntar sobre o concurso 
    - Procure por `THIAGO RIBEIRO DA SILVA` e `397050352` nos arquivos `data/matches.json` e `data/global-index.json`.
    - Verifique novos matches com o termo `ENGENHEIRO DE DADOS` ou convocações publicadas.
 4. **Registrar no Diário de Bordo:** Adicione uma nova linha no arquivo [`DIARIO_DE_BORDO.md`](file:///c:/Users/LENOVO/Documents/Projects/Monitor_Thiago/diario-oficial-monitor/DIARIO_DE_BORDO.md) na tabela `Histórico de Checagens e Interações`, detalhando data/hora, resultado da checagem e fila atual.
-5. **Reportar ao usuário:** Apresente os resultados de forma clara, amigável e objetiva.
+5. **Salvar a documentação no Git:** Comite as alterações do `DIARIO_DE_BORDO.md` (`git add DIARIO_DE_BORDO.md; git commit -m "docs: atualiza diario de bordo com checagem de DD/MM/AAAA"`) e faça `git push origin main`.
+6. **Reportar ao usuário:** Apresente os resultados de forma clara, amigável e objetiva.

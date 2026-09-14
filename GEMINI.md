@@ -49,5 +49,6 @@ Sempre que o usuário solicitar informações, status do concurso ou perguntar s
 2. **Atualizar os dados locais** executando `git pull origin main` no repositório `diario-oficial-monitor` para obter as publicações coletadas pelo GitHub Actions.
 3. **Verificar os dados mais recentes** em `data/matches.json` e `data/global-index.json` por ocorrências de `THIAGO RIBEIRO DA SILVA`, `397050352` e `ENGENHEIRO DE DADOS`.
 4. **Registrar a checagem no [`DIARIO_DE_BORDO.md`](file:///c:/Users/LENOVO/Documents/Projects/Monitor_Thiago/diario-oficial-monitor/DIARIO_DE_BORDO.md)** adicionando uma nova linha à tabela do "Histórico de Checagens e Interações".
-5. **Responder ao usuário** informando claramente se houve novas convocações, qual o último colocado chamado e a distância atual para o Thiago.
+5. **Salvar a documentação no Git:** Comitar a alteração (`git add DIARIO_DE_BORDO.md; git commit -m "docs: atualiza diario de bordo com checagem de DD/MM/AAAA"`) e enviar via `git push origin main`.
+6. **Responder ao usuário** informando claramente se houve novas convocações, qual o último colocado chamado e a distância atual para o Thiago.
 

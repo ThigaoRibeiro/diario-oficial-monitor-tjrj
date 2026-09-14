@@ -33,7 +33,8 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
    - Buscar por `THIAGO RIBEIRO DA SILVA` e `397050352` em `data/matches.json` e `data/global-index.json`.
    - Verificar se houve novos matches para `ENGENHEIRO DE DADOS` posteriores à última checagem registrada neste diário.
 4. **Atualização do Diário de Bordo:** Adicionar uma nova linha na tabela do **Histórico de Checagens e Interações** abaixo, registrando data, horário, status do Thiago, posição da fila e notas relevantes.
-5. **Comunicação:** Responder ao usuário de forma transparente, resumida e humanizada sobre o estado da fila.
+5. **Salvar e Sincronizar no Git:** Comitar a atualização (`git add DIARIO_DE_BORDO.md; git commit -m "docs: atualiza diario de bordo com checagem de DD/MM/AAAA"`) e enviar com `git push origin main` para manter o histórico permanentemente salvo na nuvem.
+6. **Comunicação:** Responder ao usuário de forma transparente, resumida e humanizada sobre o estado da fila e confirmar o registro no Git.
 
 ---
 

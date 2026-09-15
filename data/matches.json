@@ -3528,5 +3528,75 @@
     "source": "djerj_search",
     "detected_at": "2026-09-14T07:38:15.798768",
     "id": "djerj_2eeea97edbd8f585"
+  },
+  {
+    "title": "Convocação nº 31/2026",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_31_-_djerj_de_11-09-2026",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379568",
+    "id": "tjrj_1013e203b6dc469b"
+  },
+  {
+    "title": "Portaria nº 2285/2026 - Nomeação - Analista Judiciário Sem Especialidade",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_aj_sem_especialidade_2285-2026_-_djerj_26-08-2026",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379592",
+    "id": "tjrj_fd35a8636fc2294d"
+  },
+  {
+    "title": "Portaria nº 2286/2026 - Nomeação - Analista Judiciário Especialidade Assistente Social",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_assistente_social_2286-2026",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379597",
+    "id": "tjrj_30c9936decfdad7d"
+  },
+  {
+    "title": "Portaria nº 2287/2026 - Nomeação - Analista Judiciário Especialidade Comissário de Justiça da Infância, da Juventude e do Idoso",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_comissario_2287-2026",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379600",
+    "id": "tjrj_cd884265bd2eccdf"
+  },
+  {
+    "title": "Portaria nº 2288/2026 - Nomeação - Analista Judiciário Especialidade Execução de Mandados",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_oja_2288-2026",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379602",
+    "id": "tjrj_75897732c53c8419"
+  },
+  {
+    "title": "Portaria nº 2289/2026 - Nomeação - Analista Judiciário Especialidade Psicólogo",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_psicologo_2289-2026",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379605",
+    "id": "tjrj_fab2b78c4b596b61"
+  },
+  {
+    "title": "Portaria nº 2291/2026 - Nomeação – Candidato - Analista Judiciário Sem Especialidade",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/portaria_2291-2026_-_marcelo",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-09-15T18:05:14.379607",
+    "id": "tjrj_e0ad82cfebb416fc"
   }
 ]

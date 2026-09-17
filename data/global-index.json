@@ -4083,7 +4083,55 @@
       "source": "djerj_search",
       "detected_at": "2026-09-16T07:20:00.395249",
       "id": "djerj_21219bda93c5ef09"
+    },
+    {
+      "title": "Mencao no DJERJ de 17/09/2026 (Pag. 11)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=17%2F09%2F2026&caderno=A&pagina=11",
+      "snippet": "dia 17/09/2026, caderno I - Administrativo, página 11, nrpagina 1",
+      "date": "2026-09-17",
+      "pagina": "11",
+      "caderno": "A",
+      "keyword": "ENGENHEIRO DE DADOS",
+      "matched_keywords": [
+        "ENGENHEIRO DE DADOS"
+      ],
+      "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 17/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-17T07:15:29.855307",
+      "id": "djerj_35b86c9460ae017a"
+    },
+    {
+      "title": "Mencao no DJERJ de 17/09/2026 (Pag. 54)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=17%2F09%2F2026&caderno=A&pagina=54",
+      "snippet": "dia 17/09/2026, caderno I - Administrativo, página 54, nrpagina 1",
+      "date": "2026-09-17",
+      "pagina": "54",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 17/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-17T07:15:29.855332",
+      "id": "djerj_6e832d9a6cd69e0f"
+    },
+    {
+      "title": "Mencao no DJERJ de 17/09/2026 (Pag. 35)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=17%2F09%2F2026&caderno=A&pagina=35",
+      "snippet": "dia 17/09/2026, caderno I - Administrativo, página 35, nrpagina 1",
+      "date": "2026-09-17",
+      "pagina": "35",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 17/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-17T07:15:29.855337",
+      "id": "djerj_3f31bbce12113311"
     }
   ],
-  "last_update": "16/09/2026 18:05:37"
+  "last_update": "17/09/2026 07:15:29"
 }

@@ -4131,7 +4131,23 @@
       "source": "djerj_search",
       "detected_at": "2026-09-17T07:15:29.855337",
       "id": "djerj_3f31bbce12113311"
+    },
+    {
+      "title": "Mencao no DJERJ de 18/09/2026 (Pag. 9)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=18%2F09%2F2026&caderno=A&pagina=9",
+      "snippet": "dia 18/09/2026, caderno I - Administrativo, página 9, nrpagina 1",
+      "date": "2026-09-18",
+      "pagina": "9",
+      "caderno": "A",
+      "keyword": "NOMEAÇÃO",
+      "matched_keywords": [
+        "NOMEAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 18/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-09-18T07:08:16.385234",
+      "id": "djerj_6f676e06bb7efef6"
     }
   ],
-  "last_update": "17/09/2026 18:05:58"
+  "last_update": "18/09/2026 07:08:16"
 }

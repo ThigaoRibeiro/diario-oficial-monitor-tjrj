@@ -3742,5 +3742,53 @@
     "source": "djerj_search",
     "detected_at": "2026-09-18T07:08:16.385234",
     "id": "djerj_6f676e06bb7efef6"
+  },
+  {
+    "title": "Mencao no DJERJ de 22/09/2026 (Pag. 22)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F09%2F2026&caderno=A&pagina=22",
+    "snippet": "dia 22/09/2026, caderno I - Administrativo, página 22, nrpagina 1",
+    "date": "2026-09-22",
+    "pagina": "22",
+    "caderno": "A",
+    "keyword": "ENGENHEIRO DE DADOS",
+    "matched_keywords": [
+      "ENGENHEIRO DE DADOS"
+    ],
+    "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 22/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-22T07:24:04.360452",
+    "id": "djerj_54bbc446e7f2880c"
+  },
+  {
+    "title": "Mencao no DJERJ de 22/09/2026 (Pag. 15)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F09%2F2026&caderno=A&pagina=15",
+    "snippet": "dia 22/09/2026, caderno I - Administrativo, página 15, nrpagina 1",
+    "date": "2026-09-22",
+    "pagina": "15",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 22/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-22T07:24:04.360480",
+    "id": "djerj_6f4e1fb8ed509a5f"
+  },
+  {
+    "title": "Mencao no DJERJ de 22/09/2026 (Pag. 10)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F09%2F2026&caderno=A&pagina=10",
+    "snippet": "dia 22/09/2026, caderno I - Administrativo, página 10, nrpagina 1",
+    "date": "2026-09-22",
+    "pagina": "10",
+    "caderno": "A",
+    "keyword": "NOMEAÇÃO",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 22/09/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-22T07:24:04.360487",
+    "id": "djerj_1050eb9bb62f57e2"
   }
 ]

@@ -44,5 +44,7 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
 | :--- | :--- | :---: | :---: | :--- |
 | **21/08/2026** | Publicação DJERJ | ❌ Não | **2 convocados** (1º e 2º) | Publicação oficial do DJERJ nº 233/2026 convocando Gabriel Oliveira Silva Luz (1º) e Bruno Tourinho Tomas (2º). |
 | **13/09/2026 22:05** | Gemini Agent | ❌ Não | **2 convocados** (1º e 2º) | Verificação completa via GitHub Actions sincronizado até 13/09/2026. Nenhuma movimentação para Engenharia de Dados desde 21/08. Thiago segue na 11ª posição. |
+| **23/09/2026 08:39** | Gemini Agent | ❌ Não | **2 convocados** (1º e 2º) | Sincronizado via GitHub Actions até a edição do DJERJ de 23/09/2026. Verificadas menções recentes no DJERJ (páginas de precatórios e convocações de outros cargos como Sem Especialidade, Assistente Social e Psicólogo). Sem novas convocações para Engenharia de Dados. Thiago segue na 11ª posição (faltam 9 vagas). |
 
 *(Novas interações devem ser acrescentadas ao final desta tabela)*
+

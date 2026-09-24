@@ -15,10 +15,10 @@ Este documento centraliza o perfil do candidato, as regras de negócio de acompa
 ---
 
 ## 🚦 Status Atual da Fila de Convocação
-- **Última convocação publicada para Engenheiro de Dados:** DJERJ nº 233/2026 de 21/08/2026 (Caderno I - Administrativo, Págs. 6 e 23).
-- **Total de Engenheiros de Dados Convocados até agora:** **2 convocados**.
-  1. **1º lugar:** Gabriel Oliveira Silva Luz *(Exame de higidez: 28/08/2026 às 11h | Requisitos: 02/09/2026)*
-  2. **2º lugar:** Bruno Tourinho Tomas *(Exame de higidez: 28/08/2026 às 11h | Requisitos: 02/09/2026)*
+- **Última publicação para Engenheiro de Dados:** DJERJ nº 17/2026 de 24/09/2026 (Caderno I - Administrativo, Pág. 22 - Portaria nº 2871/2026 de Nomeação).
+- **Total de Engenheiros de Dados Convocados / Nomeados:** **2 candidatos**.
+  1. **1º lugar:** Gabriel Oliveira Silva Luz *(Convocado em 21/08/2026; Nomeado na Portaria nº 2871/2026 de 24/09/2026 - Matrícula 01/36500)*
+  2. **2º lugar:** Bruno Tourinho Tomas *(Convocado em 21/08/2026; Nomeado na Portaria nº 2871/2026 de 24/09/2026 - Matrícula 01/36509)*
 - **Posição do Thiago:** 11º lugar.
 - **Distância da fila:** Faltam **9 convocações** para alcançar o Thiago.
 
@@ -45,6 +45,8 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
 | **21/08/2026** | Publicação DJERJ | ❌ Não | **2 convocados** (1º e 2º) | Publicação oficial do DJERJ nº 233/2026 convocando Gabriel Oliveira Silva Luz (1º) e Bruno Tourinho Tomas (2º). |
 | **13/09/2026 22:05** | Gemini Agent | ❌ Não | **2 convocados** (1º e 2º) | Verificação completa via GitHub Actions sincronizado até 13/09/2026. Nenhuma movimentação para Engenharia de Dados desde 21/08. Thiago segue na 11ª posição. |
 | **23/09/2026 08:39** | Gemini Agent | ❌ Não | **2 convocados** (1º e 2º) | Sincronizado via GitHub Actions até a edição do DJERJ de 23/09/2026. Verificadas menções recentes no DJERJ (páginas de precatórios e convocações de outros cargos como Sem Especialidade, Assistente Social e Psicólogo). Sem novas convocações para Engenharia de Dados. Thiago segue na 11ª posição (faltam 9 vagas). |
+| **24/09/2026 10:45** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Sincronizado DJERJ de 24/09/2026. Publicada a **Portaria nº 2871/2026 (Pág. 22)** que **nomeia formalmente** Gabriel Oliveira Silva Luz (1º) e Bruno Tourinho Tomas (2º) para Engenheiro de Dados. Thiago segue no 11º lugar (faltam 9 vagas). Checagem para "Ester/Esther": localizadas nomeações de **Maria Ester Mendes Moreira Mota** (10ª Reg., Execução de Mandados, Pág. 18) e **Esther Cordeiro Vargas** (5ª Reg., Assistente Social - Negros, Pág. 15). |
 
 *(Novas interações devem ser acrescentadas ao final desta tabela)*
+
 

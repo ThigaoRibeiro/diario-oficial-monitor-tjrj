@@ -1,6 +1,10 @@
 {
   "tjrj_documents": [
     {
+      "title": "Convocação nº 32/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao-n-32-2026-djerj-de-24-09-2026"
+    },
+    {
       "title": "Convocação nº 31/2026",
       "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_31_-_djerj_de_11-09-2026"
     },
@@ -195,10 +199,6 @@
     {
       "title": "Assistente Social - Prova Tipo 1",
       "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-1"
-    },
-    {
-      "title": "Assistente Social - Prova Tipo 2",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/analista-judiciario-assistencial-assistente-social-ns-a02-assistentesocial-tipo-2"
     }
   ],
   "fgv_documents": [
@@ -4421,7 +4421,17 @@
       "source": "djerj_search",
       "detected_at": "2026-09-25T07:12:50.835676",
       "id": "djerj_0c2e6a405c409a34"
+    },
+    {
+      "title": "Convocação nº 32/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao-n-32-2026-djerj-de-24-09-2026",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-09-25T18:26:35.798739",
+      "id": "tjrj_85e6f334a04b5b50"
     }
   ],
-  "last_update": "25/09/2026 07:12:50"
+  "last_update": "25/09/2026 18:26:35"
 }

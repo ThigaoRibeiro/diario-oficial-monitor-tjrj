@@ -4170,5 +4170,37 @@
     "source": "djerj_search",
     "detected_at": "2026-09-28T08:19:38.264151",
     "id": "djerj_7834a0334c0feb97"
+  },
+  {
+    "title": "Mencao no DJERJ de 30/09/2026 (Pag. 62)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=30%2F09%2F2026&caderno=A&pagina=62",
+    "snippet": "dia 30/09/2026, caderno I - Administrativo, página 62, nrpagina 1",
+    "date": "2026-09-30",
+    "pagina": "62",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 30/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-30T08:07:21.589045",
+    "id": "djerj_9f541088267b92f3"
+  },
+  {
+    "title": "Mencao no DJERJ de 30/09/2026 (Pag. 30)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=30%2F09%2F2026&caderno=A&pagina=30",
+    "snippet": "dia 30/09/2026, caderno I - Administrativo, página 30, nrpagina 1",
+    "date": "2026-09-30",
+    "pagina": "30",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 30/09/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-09-30T08:07:21.589072",
+    "id": "djerj_2b91f9c4b9eb5fae"
   }
 ]

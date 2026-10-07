@@ -4250,5 +4250,37 @@
     "source": "djerj_search",
     "detected_at": "2026-10-05T08:29:38.184323",
     "id": "djerj_854f252a7a05c079"
+  },
+  {
+    "title": "Mencao no DJERJ de 07/10/2026 (Pag. 18)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=07%2F10%2F2026&caderno=A&pagina=18",
+    "snippet": "dia 07/10/2026, caderno I - Administrativo, página 18, nrpagina 1",
+    "date": "2026-10-07",
+    "pagina": "18",
+    "caderno": "A",
+    "keyword": "ENGENHEIRO DE DADOS",
+    "matched_keywords": [
+      "ENGENHEIRO DE DADOS"
+    ],
+    "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 07/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-07T08:14:08.904285",
+    "id": "djerj_56041d8ef098ecd3"
+  },
+  {
+    "title": "Mencao no DJERJ de 07/10/2026 (Pag. 43)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=07%2F10%2F2026&caderno=A&pagina=43",
+    "snippet": "dia 07/10/2026, caderno I - Administrativo, página 43, nrpagina 1",
+    "date": "2026-10-07",
+    "pagina": "43",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 07/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-07T08:14:08.904312",
+    "id": "djerj_ff2d9b5edd837034"
   }
 ]

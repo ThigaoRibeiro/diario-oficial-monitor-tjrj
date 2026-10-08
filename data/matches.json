@@ -4282,5 +4282,21 @@
     "source": "djerj_search",
     "detected_at": "2026-10-07T08:14:08.904312",
     "id": "djerj_ff2d9b5edd837034"
+  },
+  {
+    "title": "Mencao no DJERJ de 08/10/2026 (Pag. 30)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=08%2F10%2F2026&caderno=A&pagina=30",
+    "snippet": "dia 08/10/2026, caderno I - Administrativo, página 30, nrpagina 1",
+    "date": "2026-10-08",
+    "pagina": "30",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 08/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-08T08:30:10.340137",
+    "id": "djerj_71ca9359b501aae2"
   }
 ]

@@ -4474,5 +4474,35 @@
     "source": "djerj_search",
     "detected_at": "2026-10-13T09:02:49.064088",
     "id": "djerj_e24c5305c0885c5e"
+  },
+  {
+    "title": "Convocação nº 35/2026",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_35-2026_djerj_de_13-10-2026",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-10-13T20:09:37.545767",
+    "id": "tjrj_475bc4316ffaeaec"
+  },
+  {
+    "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/inclusao_no_resultado_final_fabiana_mello_paes_barreto_aj_especialidade_psicologo",
+    "matched_keywords": [
+      "RESULTADO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-10-13T20:09:37.545816",
+    "id": "tjrj_5d587b184c36ae4c"
+  },
+  {
+    "title": "Comunicado Inclusão - Sub Judice - Resultado Final",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/inclusao_no_resultado_final_larissa_araujo_campos_aj_sem_especialidade",
+    "matched_keywords": [
+      "RESULTADO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-10-13T20:09:37.545823",
+    "id": "tjrj_938b82b2b22d03c1"
   }
 ]

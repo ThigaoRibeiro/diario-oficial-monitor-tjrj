@@ -5133,7 +5133,23 @@
       "source": "djerj_search",
       "detected_at": "2026-10-14T07:11:21.467614",
       "id": "djerj_e05f23ef054125a5"
+    },
+    {
+      "title": "Mencao no DJERJ de 15/10/2026 (Pag. 88)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=15%2F10%2F2026&caderno=A&pagina=88",
+      "snippet": "dia 15/10/2026, caderno I - Administrativo, página 88, nrpagina 1",
+      "date": "2026-10-15",
+      "pagina": "88",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 15/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-15T07:03:11.389541",
+      "id": "djerj_f7a8f88dee7ddc53"
     }
   ],
-  "last_update": "14/10/2026 18:28:09"
+  "last_update": "15/10/2026 07:03:11"
 }

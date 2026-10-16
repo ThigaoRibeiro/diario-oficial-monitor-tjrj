@@ -5149,7 +5149,23 @@
       "source": "djerj_search",
       "detected_at": "2026-10-15T07:03:11.389541",
       "id": "djerj_f7a8f88dee7ddc53"
+    },
+    {
+      "title": "Mencao no DJERJ de 16/10/2026 (Pag. 2)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=16%2F10%2F2026&caderno=A&pagina=2",
+      "snippet": "dia 16/10/2026, caderno I - Administrativo, página 2, nrpagina 1",
+      "date": "2026-10-16",
+      "pagina": "2",
+      "caderno": "A",
+      "keyword": "NOMEAÇÃO",
+      "matched_keywords": [
+        "NOMEAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 16/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-16T06:47:24.953481",
+      "id": "djerj_f7b4e4a2e666cdbe"
     }
   ],
-  "last_update": "15/10/2026 18:10:29"
+  "last_update": "16/10/2026 06:47:24"
 }

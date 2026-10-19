@@ -21,6 +21,7 @@ Este documento centraliza o perfil do candidato, as regras de negócio de acompa
   2. **2º lugar:** Bruno Tourinho Tomas *(Convocado em 21/08/2026; Nomeado na Portaria nº 2871/2026 de 24/09/2026 - Matrícula 01/36509)*
 - **Posição do Thiago:** 11º lugar.
 - **Distância da fila:** Faltam **9 convocações** para alcançar o Thiago.
+- **Panorama Geral do Concurso (Outros Cargos):** O concurso está altamente ativo (já na **Convocação nº 35/2026** de 13/10/2026, com exames médicos em curso de 16/10 a 26/10/2026). Centenas de candidatos já foram convocados em cargos de grande escala (Técnico Judiciário, Analista Sem Especialidade, Oficial de Justiça, Assistente Social, Psicólogo, Contador e Cientista de Dados). Como os 2 primeiros de Engenheiro de Dados assumiram (sem desistências), a fila de TI aguarda deliberação da administração para convocação da próxima turma do Cadastro de Reserva.
 
 ---
 
@@ -54,7 +55,15 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
 | **12/10/2026 08:49** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Sincronizado DJERJ até a edição de 12/10/2026. Analisadas as novas ocorrências no período: 08/10 (Pág. 30) e 09/10 (Págs. 2, 5, 8 e 103) correspondem a convocações para cursos internos (Convocação CGJ nº 24/2026 - plantões judiciários) e treinamento do sistema eproc (Convocação Conjunta TJ/CGJ nº 34/2026), sem vínculo com o concurso. Nenhuma menção a Thiago Ribeiro da Silva (397050352) ou nova chamada para Engenheiro de Dados. Fila estável: Thiago segue em 11º lugar (faltam 9 posições). |
 | **14/10/2026 08:58** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Sincronizado com os dados mais recentes do GitHub Actions (execução de 14/10/2026 07:11 UTC). Auditadas as novas menções no DJERJ de 14/10: Pág. 7 referente a processo administrativo de folga eleitoral (TRE) de servidor efetivo (SEI nº 2026-06225849) e Págs. 45 a 133 relativas a atos rotineiros da administração. Nenhuma convocação de Engenharia de Dados nem menção a Thiago Ribeiro da Silva (397050352). Fila mantida: Thiago segue no 11º lugar (faltam 9 posições). |
 | **19/10/2026 10:25** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Sincronizado via GitHub Actions até a edição de 19/10/2026 (commit `81e5248`). Ocorrências no período (15 a 19/10) auditadas no PDF integral do DJERJ: convocação TJ nº 37 e 38/2026 (Págs. 2 a 4) para cursos da EMERJ/magistratura, Pág. 49 sobre cartórios e comunicados de terceiros sub judice na FGV. Menções a nomes homônimos restritas a advogados em precatórios e outro candidato da EMERJ. Nenhuma convocação para Engenheiro de Dados nem menção a Thiago Ribeiro da Silva (397050352). Fila estável: Thiago segue em 11º lugar (faltam 9 posições). |
+| **19/10/2026 18:37** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | **Auditoria ampla do certame:** Levantamento detalhado do andamento geral do concurso a pedido do candidato. Constatado que o concurso está com forte ritmo de convocações (já na **Convocação nº 35/2026** de 13/10, com exames em curso nesta semana), chamando massivamente Técnicos Judiciários (>150), Analistas Sem Especialidade, Oficiais de Justiça, Assistentes Sociais, Psicólogos, Contadores e Cientista de Dados. Engenharia de Dados segue sem novas chamadas porque os 2 primeiros nomeados tomaram posse (sem vacâncias imediatas). Fila estável: Thiago em 11º lugar (faltam 9 vagas). **Próxima checagem ativa agendada para sexta-feira, 23/10/2026.** |
 
 *(Novas interações devem ser acrescentadas ao final desta tabela)*
+
+---
+
+## 📌 Próxima Verificação Agendada
+- **Data:** **Sexta-feira, 23/10/2026**
+- **Objetivo:** Verificar novas publicações no DJERJ e portais após o encerramento das perícias médicas presenciais da Convocação nº 35/2026 (que ocorrem de 16/10 a 26/10/2026), com foco em atos de provimento de nova leva do Cadastro de Reserva para a área de Tecnologia / Engenharia de Dados.
+
 
 

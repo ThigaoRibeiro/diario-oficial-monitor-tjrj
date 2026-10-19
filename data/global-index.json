@@ -5165,7 +5165,71 @@
       "source": "djerj_search",
       "detected_at": "2026-10-16T06:47:24.953481",
       "id": "djerj_f7b4e4a2e666cdbe"
+    },
+    {
+      "title": "Mencao no DJERJ de 19/10/2026 (Pag. 2)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=19%2F10%2F2026&caderno=A&pagina=2",
+      "snippet": "dia 19/10/2026, caderno I - Administrativo, página 2, nrpagina 1",
+      "date": "2026-10-19",
+      "pagina": "2",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 19/10/2026 . (total de 4 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-19T07:23:40.291075",
+      "id": "djerj_2ca2e7735d589ddd"
+    },
+    {
+      "title": "Mencao no DJERJ de 19/10/2026 (Pag. 4)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=19%2F10%2F2026&caderno=A&pagina=4",
+      "snippet": "dia 19/10/2026, caderno I - Administrativo, página 4, nrpagina 1",
+      "date": "2026-10-19",
+      "pagina": "4",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 19/10/2026 . (total de 4 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-19T07:23:40.291098",
+      "id": "djerj_021c61078e8b352b"
+    },
+    {
+      "title": "Mencao no DJERJ de 19/10/2026 (Pag. 3)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=19%2F10%2F2026&caderno=A&pagina=3",
+      "snippet": "dia 19/10/2026, caderno I - Administrativo, página 3, nrpagina 1",
+      "date": "2026-10-19",
+      "pagina": "3",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 19/10/2026 . (total de 4 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-19T07:23:40.291103",
+      "id": "djerj_4a0c21a7a716e76d"
+    },
+    {
+      "title": "Mencao no DJERJ de 19/10/2026 (Pag. 49)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=19%2F10%2F2026&caderno=A&pagina=49",
+      "snippet": "dia 19/10/2026, caderno I - Administrativo, página 49, nrpagina 1",
+      "date": "2026-10-19",
+      "pagina": "49",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 19/10/2026 . (total de 4 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-19T07:23:40.291106",
+      "id": "djerj_62205d496c99f381"
     }
   ],
-  "last_update": "18/10/2026 17:12:58"
+  "last_update": "19/10/2026 07:23:40"
 }

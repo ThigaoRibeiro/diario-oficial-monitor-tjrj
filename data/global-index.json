@@ -5246,7 +5246,23 @@
       "source": "djerj_search",
       "detected_at": "2026-10-20T07:14:46.588355",
       "id": "djerj_ffcc4678f2a5680c"
+    },
+    {
+      "title": "Mencao no DJERJ de 21/10/2026 (Pag. 11)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=21%2F10%2F2026&caderno=A&pagina=11",
+      "snippet": "dia 21/10/2026, caderno I - Administrativo, página 11, nrpagina 1",
+      "date": "2026-10-21",
+      "pagina": "11",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 21/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-21T07:09:48.885717",
+      "id": "djerj_3a695e1ad44e8e36"
     }
   ],
-  "last_update": "20/10/2026 18:25:35"
+  "last_update": "21/10/2026 07:09:48"
 }

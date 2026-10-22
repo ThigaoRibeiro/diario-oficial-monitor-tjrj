@@ -5262,7 +5262,87 @@
       "source": "djerj_search",
       "detected_at": "2026-10-21T07:09:48.885717",
       "id": "djerj_3a695e1ad44e8e36"
+    },
+    {
+      "title": "Mencao no DJERJ de 22/10/2026 (Pag. 26)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F10%2F2026&caderno=A&pagina=26",
+      "snippet": "dia 22/10/2026, caderno I - Administrativo, página 26, nrpagina 1",
+      "date": "2026-10-22",
+      "pagina": "26",
+      "caderno": "A",
+      "keyword": "ENGENHEIRO DE DADOS",
+      "matched_keywords": [
+        "ENGENHEIRO DE DADOS"
+      ],
+      "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 22/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-22T07:12:18.221504",
+      "id": "djerj_a0142b12df8c5a65"
+    },
+    {
+      "title": "Mencao no DJERJ de 22/10/2026 (Pag. 124)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F10%2F2026&caderno=A&pagina=124",
+      "snippet": "dia 22/10/2026, caderno I - Administrativo, página 124, nrpagina 1",
+      "date": "2026-10-22",
+      "pagina": "124",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 22/10/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-22T07:12:18.221529",
+      "id": "djerj_bfacb211d1c23720"
+    },
+    {
+      "title": "Mencao no DJERJ de 22/10/2026 (Pag. 125)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F10%2F2026&caderno=A&pagina=125",
+      "snippet": "dia 22/10/2026, caderno I - Administrativo, página 125, nrpagina 1",
+      "date": "2026-10-22",
+      "pagina": "125",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 22/10/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-22T07:12:18.221533",
+      "id": "djerj_bc406ae774188997"
+    },
+    {
+      "title": "Mencao no DJERJ de 22/10/2026 (Pag. 112)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F10%2F2026&caderno=A&pagina=112",
+      "snippet": "dia 22/10/2026, caderno I - Administrativo, página 112, nrpagina 1",
+      "date": "2026-10-22",
+      "pagina": "112",
+      "caderno": "A",
+      "keyword": "NOMEAÇÃO",
+      "matched_keywords": [
+        "NOMEAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 22/10/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-22T07:12:18.221536",
+      "id": "djerj_7f4a9b2fbe926b81"
+    },
+    {
+      "title": "Mencao no DJERJ de 22/10/2026 (Pag. 113)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=22%2F10%2F2026&caderno=A&pagina=113",
+      "snippet": "dia 22/10/2026, caderno I - Administrativo, página 113, nrpagina 1",
+      "date": "2026-10-22",
+      "pagina": "113",
+      "caderno": "A",
+      "keyword": "NOMEAÇÃO",
+      "matched_keywords": [
+        "NOMEAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 22/10/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-10-22T07:12:18.221538",
+      "id": "djerj_c6f9180c95d9d73b"
     }
   ],
-  "last_update": "21/10/2026 18:31:29"
+  "last_update": "22/10/2026 07:12:18"
 }

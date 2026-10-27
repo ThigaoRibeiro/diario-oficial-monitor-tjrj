@@ -5193,5 +5193,37 @@
     "source": "djerj_search",
     "detected_at": "2026-10-26T07:29:23.570091",
     "id": "djerj_1c2d65bee6863803"
+  },
+  {
+    "title": "Mencao no DJERJ de 27/10/2026 (Pag. 5)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=27%2F10%2F2026&caderno=A&pagina=5",
+    "snippet": "dia 27/10/2026, caderno I - Administrativo, página 5, nrpagina 1",
+    "date": "2026-10-27",
+    "pagina": "5",
+    "caderno": "A",
+    "keyword": "ENGENHEIRO DE DADOS",
+    "matched_keywords": [
+      "ENGENHEIRO DE DADOS"
+    ],
+    "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 27/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-27T07:24:23.142155",
+    "id": "djerj_e53897ce667caff4"
+  },
+  {
+    "title": "Mencao no DJERJ de 27/10/2026 (Pag. 46)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=27%2F10%2F2026&caderno=A&pagina=46",
+    "snippet": "dia 27/10/2026, caderno I - Administrativo, página 46, nrpagina 1",
+    "date": "2026-10-27",
+    "pagina": "46",
+    "caderno": "A",
+    "keyword": "NOMEAÇÃO",
+    "matched_keywords": [
+      "NOMEAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto NOMEAÇÃO no diário publicado em 27/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-27T07:24:23.142185",
+    "id": "djerj_35b01a0fd7ab5882"
   }
 ]

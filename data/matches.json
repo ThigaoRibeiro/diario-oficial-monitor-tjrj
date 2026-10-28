@@ -5225,5 +5225,21 @@
     "source": "djerj_search",
     "detected_at": "2026-10-27T07:24:23.142185",
     "id": "djerj_35b01a0fd7ab5882"
+  },
+  {
+    "title": "Mencao no DJERJ de 28/10/2026 (Pag. 116)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=28%2F10%2F2026&caderno=A&pagina=116",
+    "snippet": "dia 28/10/2026, caderno I - Administrativo, página 116, nrpagina 1",
+    "date": "2026-10-28",
+    "pagina": "116",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 28/10/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-10-28T07:58:55.807956",
+    "id": "djerj_8a4356e3e87003ea"
   }
 ]

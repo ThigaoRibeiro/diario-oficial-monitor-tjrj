@@ -59,13 +59,15 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
 
 | **27/10/2026 12:35** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Sincronizado com os dados mais recentes do GitHub Actions (commit `f0b6d89` de 27/10/2026). Auditadas as publicações do período (20 a 27/10): no DJERJ de 26/10 (Págs. 70 a 89), publicadas portarias da CGJ sobre lotação transitória dos concursados recém-empossados da Convocação nº 32/2026 (Analista Judiciário Sem Esp. e Técnico Judiciário nas 3ª e 5ª Regiões). As menções a 'Engenheiro de Dados' de 22/10 (Pág. 26) e 27/10 (Pág. 5) foram termos cruzados em precatórios e no Termo de Cooperação TJRJ/PGE-RJ envolvendo comarcas como Eng. Paulo de Frontin. Nenhuma convocação de Engenharia de Dados nem menção a Thiago Ribeiro da Silva (397050352). Fila estável: Thiago permanece em 11º lugar (faltam 9 posições). |
 
+| **03/11/2026 15:30** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | **MARCO RELEVANTE - Convocação nº 39/2026 (DJERJ 03/11/2026):** O TJRJ abriu oficialmente a 2ª grande leva para a área de Tecnologia da Informação (DGTEC). Convocados candidatos em lote: **Analista de Sistemas até o 15º lugar** (chamados 7 de uma vez), **Analista de Negócios até o 14º lugar**, **Analista de Infraestrutura até o 8º lugar** e **Analista de Gestão até o 7º lugar**. Engenharia de Dados não foi contemplada nesta lista específica da Convocação 39, mas o avanço até o 15º lugar nas especialidades irmãs de TI confirma empiricamente que a 11ª posição de Thiago é perfeitamente atingível durante a vigência do certame. Fila atual de Engenharia de Dados: estável em 2 nomeados, Thiago no 11º lugar (faltam 9 vagas). |
+
 *(Novas interações devem ser acrescentadas ao final desta tabela)*
 
 ---
 
-## 📌 Status das Etapas e Próximos Passos
-- **Fase Recém-Concluída:** As perícias médicas e apresentação de documentos da **Convocação nº 35/2026** se encerraram ontem (26/10/2026).
-- **Próximo Ponto de Atenção:** Acompanhar nos próximos dias a publicação das portarias de nomeação da Convocação nº 35/2026 e a eventual publicação de novo ato pelo Presidente do TJRJ convocando a próxima leva do Cadastro de Reserva para as especialidades de Tecnologia da Informação / Engenharia de Dados.
+## 📌 Status das Etapas e Análise de Probabilidade
+- **Fase Atual (Novembro/2026):** Publicada a **Convocação nº 39/2026** convocando nova turma expressiva de Tecnologia da Informação com exames e apresentação marcados para 09/11 e 13/11/2026.
+- **Projeção para Engenharia de Dados:** Com apenas 5 meses de homologação do concurso (vigência até meados de 2028, prorrogável até 2030) e convocações de TI já atingindo o 15º colocado em especialidades afins, a probabilidade de chamamento do Thiago (11º lugar) é **muito expressiva** ao longo do período de validade do certame.
 
 
 

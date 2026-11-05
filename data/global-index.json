@@ -1,6 +1,10 @@
 {
   "tjrj_documents": [
     {
+      "title": "Convocação nº 39/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_39-2026_"
+    },
+    {
       "title": "Convocação nº 35/2026",
       "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_35-2026_djerj_de_13-10-2026"
     },
@@ -195,10 +199,6 @@
     {
       "title": "Quinta Retificação ao Edital nº 01/2025",
       "url": "https://www.tjrj.jus.br/documents/d/guest/5-retificacao_edital_de_abertura_tjrj_analista_judiciario"
-    },
-    {
-      "title": "Aviso TJ nº 70/2026 – Cronograma do Concurso",
-      "url": "https://www.tjrj.jus.br/documents/d/guest/aviso_tj_n_70-2026-cronograma_aj"
     }
   ],
   "fgv_documents": [
@@ -6015,7 +6015,17 @@
       "source": "djerj_search",
       "detected_at": "2026-11-05T09:03:21.526467",
       "id": "djerj_9c0e6d737ce39e2b"
+    },
+    {
+      "title": "Convocação nº 39/2026",
+      "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_39-2026_",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "source": "tjrj_portal",
+      "detected_at": "2026-11-05T20:59:04.526265",
+      "id": "tjrj_2be4b417e9fa8e4c"
     }
   ],
-  "last_update": "05/11/2026 09:03:21"
+  "last_update": "05/11/2026 20:59:04"
 }

@@ -5610,5 +5610,15 @@
     "source": "djerj_search",
     "detected_at": "2026-11-05T09:03:21.526467",
     "id": "djerj_9c0e6d737ce39e2b"
+  },
+  {
+    "title": "Convocação nº 39/2026",
+    "url": "https://www.tjrj.jus.br/documents/d/guest/convocacao_n_39-2026_",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "source": "tjrj_portal",
+    "detected_at": "2026-11-05T20:59:04.526265",
+    "id": "tjrj_2be4b417e9fa8e4c"
   }
 ]

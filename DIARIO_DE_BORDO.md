@@ -61,6 +61,8 @@ Sempre que o usuário iniciar uma conversa ou perguntar sobre o concurso / convo
 
 | **03/11/2026 15:30** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | **MARCO RELEVANTE - Convocação nº 39/2026 (DJERJ 03/11/2026):** O TJRJ abriu oficialmente a 2ª grande leva para a área de Tecnologia da Informação (DGTEC). Convocados candidatos em lote: **Analista de Sistemas até o 15º lugar** (chamados 7 de uma vez), **Analista de Negócios até o 14º lugar**, **Analista de Infraestrutura até o 8º lugar** e **Analista de Gestão até o 7º lugar**. Engenharia de Dados não foi contemplada nesta lista específica da Convocação 39, mas o avanço até o 15º lugar nas especialidades irmãs de TI confirma empiricamente que a 11ª posição de Thiago é perfeitamente atingível durante a vigência do certame. Fila atual de Engenharia de Dados: estável em 2 nomeados, Thiago no 11º lugar (faltam 9 vagas). |
 
+| **07/11/2026 15:00** | Antigravity / Gemini | ❌ Não | **2 nomeados** (1º e 2º) | Varredura minuciosa de toda a primeira semana de novembro (03 a 07/11/2026). No DJERJ de 04/11 (Págs. 2 a 12), o Presidente do TJRJ publicou Termo de Retificação e republicou a Convocação nº 39/2026 apenas para corrigir erro material de digitação no cargo de Técnico Judiciário, mantendo inalteradas as turmas de TI já convocadas. Demais ocorrências no período (Págs. 70 a 130 de 04/11 e 63-64 de 05/11) restritas a nomeações civis de curatela e processos cíveis alheios. Nenhuma menção a Thiago Ribeiro da Silva (397050352) ou nova chamada para Engenheiro de Dados. Candidato segue seguro e plenamente resguardado na 11ª posição (faltam 9 vagas). |
+
 *(Novas interações devem ser acrescentadas ao final desta tabela)*
 
 ---

@@ -6121,7 +6121,39 @@
       "source": "djerj_search",
       "detected_at": "2026-11-10T09:22:01.297303",
       "id": "djerj_2f33f358aadccffe"
+    },
+    {
+      "title": "Mencao no DJERJ de 11/11/2026 (Pag. 57)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=11%2F11%2F2026&caderno=A&pagina=57",
+      "snippet": "dia 11/11/2026, caderno I - Administrativo, página 57, nrpagina 1",
+      "date": "2026-11-11",
+      "pagina": "57",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 11/11/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-11-11T08:55:59.500609",
+      "id": "djerj_f6816472d03b8983"
+    },
+    {
+      "title": "Mencao no DJERJ de 11/11/2026 (Pag. 63)",
+      "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=11%2F11%2F2026&caderno=A&pagina=63",
+      "snippet": "dia 11/11/2026, caderno I - Administrativo, página 63, nrpagina 1",
+      "date": "2026-11-11",
+      "pagina": "63",
+      "caderno": "A",
+      "keyword": "CONVOCAÇÃO",
+      "matched_keywords": [
+        "CONVOCAÇÃO"
+      ],
+      "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 11/11/2026 . (total de 2 registros, com mais de uma ocorrência por registro).",
+      "source": "djerj_search",
+      "detected_at": "2026-11-11T08:55:59.500634",
+      "id": "djerj_80ba281da2279e3d"
     }
   ],
-  "last_update": "10/11/2026 20:45:29"
+  "last_update": "11/11/2026 08:55:59"
 }

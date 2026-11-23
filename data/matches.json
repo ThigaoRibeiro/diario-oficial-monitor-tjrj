@@ -6018,5 +6018,37 @@
     "source": "tjrj_portal",
     "detected_at": "2026-11-19T22:03:38.808226",
     "id": "tjrj_752a5fe0f93366ff"
+  },
+  {
+    "title": "Mencao no DJERJ de 23/11/2026 (Pag. 36)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=23%2F11%2F2026&caderno=A&pagina=36",
+    "snippet": "dia 23/11/2026, caderno I - Administrativo, página 36, nrpagina 1",
+    "date": "2026-11-23",
+    "pagina": "36",
+    "caderno": "A",
+    "keyword": "ENGENHEIRO DE DADOS",
+    "matched_keywords": [
+      "ENGENHEIRO DE DADOS"
+    ],
+    "search_info": "Você fez uma busca pelo texto ENGENHEIRO DE DADOS no diário publicado em 23/11/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-11-23T10:23:20.807443",
+    "id": "djerj_fed025ec3ae13848"
+  },
+  {
+    "title": "Mencao no DJERJ de 23/11/2026 (Pag. 32)",
+    "url": "https://www3.tjrj.jus.br/consultadje/consultaDJE.aspx?dtPub=23%2F11%2F2026&caderno=A&pagina=32",
+    "snippet": "dia 23/11/2026, caderno I - Administrativo, página 32, nrpagina 1",
+    "date": "2026-11-23",
+    "pagina": "32",
+    "caderno": "A",
+    "keyword": "CONVOCAÇÃO",
+    "matched_keywords": [
+      "CONVOCAÇÃO"
+    ],
+    "search_info": "Você fez uma busca pelo texto CONVOCAÇÃO no diário publicado em 23/11/2026 . (total de 1 registros, com mais de uma ocorrência por registro).",
+    "source": "djerj_search",
+    "detected_at": "2026-11-23T10:23:20.807469",
+    "id": "djerj_4be1795768ce6129"
   }
 ]
